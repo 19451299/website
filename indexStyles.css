@@ -1,0 +1,149 @@
+/* root (all) */
+
+:root {
+  /*  */
+  font-family: Arial, Helvetica, sans-serif;
+  /* padding sohuld default 24px */
+  --varPadding: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* outlines */
+
+p,
+div,
+section,
+article,
+header,
+footer,
+nav,
+a {
+  /* border-color: red;
+  border-width: 1px;
+  border-style: solid; */
+}
+body {
+  /* display: flex;
+  flex-direction: column; */
+  margin: 0px;
+}
+
+/* semantic text styles */
+
+h1 {
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h3 {
+}
+
+h4 {
+}
+
+/* header */
+.header {
+  background-color: hsla(0, 0%, 70%, 1);
+  padding-left: var(--varPadding);
+  padding-right: var(--varPadding);
+}
+.nav_header {
+  background-color: hsla(0, 0%, 90%, 1);
+  display: flex;
+  justify-content: space-between;
+  height: 55px;
+}
+.div_headerLogoBB {
+  width: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.img_headerLogo {
+  width: 100%;
+  object-fit: cover;
+}
+
+.div_headerLinksBB {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.div_navLinksBB {
+  margin-left: 16px;
+}
+.a_navLinks {
+  text-decoration: none;
+  color: black;
+}
+.span_navLinkTextStyling {
+  color: green;
+}
+.div_headerNavHB {
+  display: none;
+}
+
+.btn_HBtest {
+  padding: 5px;
+  margin: 0px;
+}
+
+/* media query 425px turn into hamburger*/
+@media screen and (max-width: 426px) {
+  .div_headerLinksBB {
+    display: none;
+  }
+  .div_headerNavHB {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* section 1 */
+.div_section01 {
+  background-color: hsla(0, 0%, 70%, 1);
+  padding-left: var(--varPadding);
+  padding-right: var(--varPadding);
+}
+/* section 2 */
+.div_section02 {
+  background-color: hsla(0, 0%, 90%, 1);
+  padding-left: var(--varPadding);
+  padding-right: var(--varPadding);
+}
+/* section 3 */
+.div_section03 {
+  background-color: hsla(0, 0%, 70%, 1);
+  padding-left: var(--varPadding);
+  padding-right: var(--varPadding);
+}
+/* section 4 */
+.div_section04 {
+  background-color: hsla(0, 0%, 90%, 1);
+  padding-left: var(--varPadding);
+  padding-right: var(--varPadding);
+}
+/* section 5 */
+.div_section05 {
+  background-color: hsla(0, 0%, 70%, 1);
+  padding-left: var(--varPadding);
+  padding-right: var(--varPadding);
+}
+/* section 6 */
+.div_section06 {
+  background-color: hsla(0, 0%, 90%, 1);
+  padding-left: var(--varPadding);
+  padding-right: var(--varPadding);
+}
+/* footer */
+.footer {
+  background-color: hsla(0, 0%, 70%, 1);
+}
+.nav_footer {
+  background-color: hsla(0, 0%, 90%, 1);
+}
