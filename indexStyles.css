@@ -5,6 +5,7 @@
   font-family: Arial, Helvetica, sans-serif;
   /* padding sohuld default 24px */
   --varPadding: 24px;
+  --squareWidthToAdjHeight: 250px;
 }
 
 * {
@@ -20,11 +21,86 @@ article,
 header,
 footer,
 nav,
-a {
-  /* border-color: red;
+a,
+span {
+  border-color: red;
   border-width: 1px;
-  border-style: solid; */
+  border-style: solid;
 }
+
+/* shoelace */
+sl-card,
+sl-carousel {
+  border-color: purple;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.sl_carouselBIG {
+  --aspect-ratio: 1/1;
+  width: auto;
+}
+
+.sl_carouselBIG::part(base) {
+  display: grid;
+  width: fit-content;
+}
+
+.sl_carouselBIG::part(scroll-container) {
+  --slides-per-page: 3;
+}
+
+.sl_carouselBIG_item.--is-active {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+
+/* -------- */
+
+.sl_carouselTest {
+  --aspect-ratio: 1/1;
+  width: var(--squareWidthToAdjHeight);
+}
+
+.sl_carouselTest::part(base) {
+  border-color: orange;
+  border-width: 2px;
+  border-style: solid;
+  /* display: block; */
+  display: grid;
+  gap: 0px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; */
+}
+
+.sl_carouselTest::part(scroll-container) {
+  border-color: blue;
+  border-width: 2px;
+  border-style: solid;
+  grid-area: 1 / 1;
+}
+
+.sl_carouselTest::part(pagination) {
+  border-color: green;
+  border-width: 2px;
+  border-style: solid;
+  /* works with display block on parent, but child image resizes to not fill square */
+  grid-area: 1 / 1;
+  position: relative;
+  bottom: calc(20px + calc(-1 * calc(var(--squareWidthToAdjHeight) / 2)));
+}
+
+.sl_cardTest::part(body) {
+  padding: 10px;
+}
+
+/* shoelace end */
+
 body {
   /* display: flex;
   flex-direction: column; */

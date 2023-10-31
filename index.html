@@ -7,7 +7,28 @@
     <!-- pyscript. uncomment for server stuff -->
     <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
-    <!-- regular stylesheets -->
+    <!-- shoelace -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"
+    ></script>
+    <!-- shoelace light and dark system set stylesheet -->
+    <!-- <link
+      rel="stylesheet"
+      media="(prefers-color-scheme:light)"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css"
+    />
+    <link
+      rel="stylesheet"
+      media="(prefers-color-scheme:dark)"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/dark.css"
+      onload="document.documentElement.classList.add('sl-theme-dark');"
+    /> -->
+    <!-- regular stylesheet -->
     <link rel="stylesheet" href="./indexStyles.css" />
   </head>
   <body>
@@ -64,7 +85,166 @@
     <!-- section 3 -->
     <div class="div_section03">hello</div>
     <!-- section 4 -->
-    <div class="div_section04">hello</div>
+    <div class="div_section04" style="height: 100px">hello</div>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+      "
+    >
+      <sl-carousel pagination loop mouse-dragging class="sl_carouselBIG">
+        <sl-carousel-item class="sl_carouselBIG_item"
+          ><div
+            style="
+              background-color: lightgray;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: row;
+            "
+          >
+            <span>fortnite</span>
+          </div>
+        </sl-carousel-item>
+        <sl-carousel-item class="sl_carouselBIG_item"
+          ><div
+            style="
+              background-color: lightgray;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: row;
+            "
+          >
+            <span>fortnite</span>
+          </div></sl-carousel-item
+        >
+        <sl-carousel-item class="sl_carouselBIG_item"
+          ><div
+            style="
+              background-color: lightgray;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: row;
+            "
+          >
+            <span>fortnite</span>
+          </div></sl-carousel-item
+        >
+        <sl-carousel-item class="sl_carouselBIG_item"
+          ><div
+            style="
+              background-color: lightgray;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: row;
+            "
+          >
+            <span>fortnite</span>
+          </div></sl-carousel-item
+        >
+        <sl-carousel-item class="sl_carouselBIG_item"
+          ><div
+            style="
+              background-color: lightgray;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: row;
+            "
+          >
+            <span>fortnite</span>
+          </div></sl-carousel-item
+        >
+        <sl-carousel-item class="sl_carouselBIG_item"
+          ><div
+            style="
+              background-color: lightgray;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: row;
+            "
+          >
+            <span>fortnite</span>
+          </div></sl-carousel-item
+        >
+      </sl-carousel>
+    </div>
+
+    <sl-card class="sl_cardTest">
+      <sl-carousel pagination loop mouse-dragging class="sl_carouselTest">
+        <sl-carousel-item
+          ><img
+            src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+            alt="fortnite"
+        /></sl-carousel-item>
+        <sl-carousel-item
+          ><img
+            src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+            alt="fortnite"
+        /></sl-carousel-item>
+        <sl-carousel-item
+          ><img
+            src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+            alt="fortnite"
+        /></sl-carousel-item>
+      </sl-carousel>
+    </sl-card>
+    <sl-card class="sl_cardTest">
+      <sl-carousel pagination loop mouse-dragging class="sl_carouselTest">
+        <sl-carousel-item
+          ><img
+            src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+            alt="fortnite"
+        /></sl-carousel-item>
+        <sl-carousel-item
+          ><img
+            src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+            alt="fortnite"
+        /></sl-carousel-item>
+        <sl-carousel-item
+          ><img
+            src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+            alt="fortnite"
+        /></sl-carousel-item>
+      </sl-carousel>
+    </sl-card>
+    <sl-card class="sl_cardTest">
+      <sl-carousel pagination loop mouse-dragging class="sl_carouselTest">
+        <sl-carousel-item
+          ><img
+            src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+            alt="fortnite"
+        /></sl-carousel-item>
+        <sl-carousel-item
+          ><img
+            src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+            alt="fortnite"
+        /></sl-carousel-item>
+        <sl-carousel-item
+          ><img
+            src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+            alt="fortnite"
+        /></sl-carousel-item>
+      </sl-carousel>
+    </sl-card>
     <!-- section 5 -->
     <div class="div_section05">hello</div>
     <!-- section 6 -->
@@ -75,8 +255,8 @@
     </footer>
 
     <!-- scripts. uncomment for server stuff -->
-    <!-- <script src="./jsMain.js" type="defer"></script>
-    <py-config src="./pyscript.toml"></py-config>
+    <script src="./jsMain.js" type="defer"></script>
+    <!-- <py-config src="./pyscript.toml"></py-config>
     <py-script src="./pyMain.py"></py-script> -->
   </body>
 </html>
