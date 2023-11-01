@@ -5,6 +5,8 @@
   /* padding sohuld default 24px */
   --varPadding: 24px;
   --squareWidthToAdjHeight: 250px;
+  /* change to opac 1 for ship */
+  --footerWhiteColour: hsla(0, 0%, 96%, 1);
 }
 
 * {
@@ -48,6 +50,10 @@ h4 {
 
 .boldText {
   font-weight: 600;
+}
+
+.smallText {
+  font-size: 12px;
 }
 
 /* --------------------------------------------------------------------------------------- */
@@ -343,17 +349,84 @@ h4 {
 /* --------------------------------------------------------------------------------------- */
 /* FOOTER */
 .f_footer_bb {
-  background-color: hsla(250, 100%, 70%, 0.5);
+  background-color: hsla(0, 0%, 4%, 1);
+  /* so i can see what im doing colour */
+  /* background-color: hsla(0, 0%, 60%, 1); */
   padding-left: var(--varPadding);
   padding-right: var(--varPadding);
   padding-top: var(--varPadding);
   padding-bottom: var(--varPadding);
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .n_footer {
   /* back */
+}
+
+.d_bb_footerNavLeft {
+  display: flex;
+  flex-direction: row;
+}
+
+.d_f_n_bb_links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.n_footer_overwrite {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.d_f_bb_socialMedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 20px;
+}
+
+.n_f_moreNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 20px;
+}
+
+.s_linkOverwrite {
+  color: var(--footerWhiteColour);
+  text-decoration: solid;
+}
+
+.s_abnOverwrite {
+  /* colour of abn items but also acknowledgement of country */
+  color: hsla(0, 0%, 33%, 1);
+}
+
+.d_f_bb_abn {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 20px;
+  align-items: baseline;
+}
+
+.smallText_overwrite {
+  font-size: 8px;
+  color: var(--footerWhiteColour);
+}
+
+.d_BB_socialLinks {
+  min-width: 25px;
+  max-width: 30px;
+  object-fit: cover;
+}
+
+.i_f_socialsImg {
+  width: 100%;
 }
 
 /* --------------------------------------------------------------------------------------- */
