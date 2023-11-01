@@ -4,36 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>a3</title>
-    <!-- pyscript. uncomment for server stuff -->
-    <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
-    <!-- shoelace -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css"
-    />
-    <script
-      type="module"
-      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"
-    ></script>
-    <!-- shoelace light and dark system set stylesheet -->
-    <!-- <link
-      rel="stylesheet"
-      media="(prefers-color-scheme:light)"
-      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css"
-    />
-    <link
-      rel="stylesheet"
-      media="(prefers-color-scheme:dark)"
-      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/dark.css"
-      onload="document.documentElement.classList.add('sl-theme-dark');"
-    /> -->
-    <!-- regular stylesheet -->
+    <!-- STYLESHEETS -->
+    <!-- MAIN stylesheet -->
     <link rel="stylesheet" href="./indexStyles.css" />
+    <!-- PYSCRIPT stylesheet (server stuff) -->
+    <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" /> -->
+    <!-- SHOELACE stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css"
+    />
+    <!-- SWIPER stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
-    <!-- header -->
+    <!-- HEADER -->
     <header class="header">
+      <!-- NAV -->
       <nav class="nav_header">
         <div class="div_headerLogoBB">
           <a href="https://www.google.com/"
@@ -69,29 +59,200 @@
           <button class="btn_HBtest">HB</button>
         </div>
       </nav>
+      <!-- /NAV -->
     </header>
-    <!-- section 1 -->
-    <div class="div_section01">
-      <!-- [insert] video -->
-      <h2>welcome</h2>
+    <!-- /HEADER -->
+    <!-- SEC 01 -->
+    <div class="d_sec01 debug">
+      <div class="debug d_sec01_bb_video">[insert video]</div>
+      <div class="debug d_sec01_bb_text-video-overlay">
+        <h2 class="debug subHeading02 boldText">Welcome</h2>
+        <span class="debug boldText">Curtin Graduate Event 2023</span>
+      </div>
+      <div class="debug d_sec01_bb_btn">
+        <button class="debug d_sec01_btn">
+          <div class="debug d_sec01_btn_img"></div>
+        </button>
+      </div>
     </div>
-    <!-- section 2 -->
-    <div class="div_section02">
-      <section>
-        <h2>title</h2>
-        <article>body text</article>
+    <!-- /SEC 01 -->
+    <!-- SEC 02 -->
+    <div class="debug d_sec02">
+      <section class="debug s_sec02_bb">
+        <h2 class="debug subHeading02 boldText">Who are we?</h2>
+        <article class="debug art_sec02">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
+          perferendis cupiditate soluta maiores minima officiis rerum facere
+          veniam blanditiis quo ex, laboriosam sequi nisi at deleniti facilis
+          dicta velit magnam recusandae est voluptates explicabo qui? Dolorum
+          quaerat eaque at quisquam.
+        </article>
+        <h3 class="debug subHeading03 boldText">See what people are saying</h3>
       </section>
     </div>
-    <!-- section 3 -->
-    <div class="div_section03">hello</div>
-    <!-- section 4 -->
-    <div class="div_section04" style="height: 100px">hello</div>
+    <!-- /SEC 02 -->
+    <!-- SEC 03 -->
+    <div>SEC 03</div>
+    <!-- /SEC 03 -->
+    <!-- SEC 04 -->
+    <div>SEC 04</div>
+    <!-- /SEC 04 -->
+    <!-- SEC 05 -->
+    <div>SEC 05</div>
+    <!-- /SEC 05 -->
+    <!-- TEST SEC 01 -->
+    <div class="d_swiperParent">
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <sl-card class="sl_cardTest">
+              <sl-carousel
+                pagination
+                loop
+                mouse-dragging
+                class="sl_carouselTest"
+              >
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+              </sl-carousel>
+            </sl-card>
+          </div>
+          <!--  -->
+          <div class="swiper-slide">
+            <sl-card class="sl_cardTest">
+              <sl-carousel
+                pagination
+                loop
+                mouse-dragging
+                class="sl_carouselTest"
+              >
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+              </sl-carousel>
+            </sl-card>
+          </div>
+          <!--  -->
+          <div class="swiper-slide">
+            <sl-card class="sl_cardTest">
+              <sl-carousel
+                pagination
+                loop
+                mouse-dragging
+                class="sl_carouselTest"
+              >
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+              </sl-carousel>
+            </sl-card>
+          </div>
+          <!--  -->
+          <div class="swiper-slide">
+            <sl-card class="sl_cardTest">
+              <sl-carousel
+                pagination
+                loop
+                mouse-dragging
+                class="sl_carouselTest"
+              >
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+              </sl-carousel>
+            </sl-card>
+          </div>
+        </div>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div> -->
+      </div>
+    </div>
+    <div class="swiper-pagination" style="position: relative"></div>
+    <div class="swiper-button-next" style="position: relative"></div>
+    <div class="swiper-button-prev" style="position: relative"></div>
+    <!-- /TEST SEC 01 -->
+
+    <!-- TEST SEC 02 (4a) -->
+    <div class="d_sec4a">
+      <div class="d_sec4a02">sussy fortnite balls</div>
+      <div class="d_sec4a02">
+        <sl-carousel pagination loop class="sl-carousel_test02">
+          <sl-carousel-item class="sl-carousel-item_test02"
+            ><div class="d_sl-carousel-item-inside">#1</div></sl-carousel-item
+          >
+          <sl-carousel-item class="sl-carousel-item_test02">
+            <div class="d_sl-carousel-item-inside">#2</div></sl-carousel-item
+          >
+          <sl-carousel-item class="sl-carousel-item_test02">
+            <div class="d_sl-carousel-item-inside">#3</div></sl-carousel-item
+          >
+          <sl-carousel-item class="sl-carousel-item_test02">
+            <div class="d_sl-carousel-item-inside">#4</div></sl-carousel-item
+          >
+        </sl-carousel>
+      </div>
+    </div>
+    <!-- /TEST SEC 02 (4a) -->
+
+    <!-- TEST SEC 02 (4b) -->
     <div
       style="
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
+        height: 300px;
       "
     >
       <sl-carousel pagination loop mouse-dragging class="sl_carouselBIG">
@@ -187,7 +348,9 @@
         >
       </sl-carousel>
     </div>
+    <!-- /TEST SEC 02 (4b) -->
 
+    <!-- TEST SEC 03 -->
     <sl-card class="sl_cardTest">
       <sl-carousel pagination loop mouse-dragging class="sl_carouselTest">
         <sl-carousel-item
@@ -245,18 +408,49 @@
         /></sl-carousel-item>
       </sl-carousel>
     </sl-card>
-    <!-- section 5 -->
-    <div class="div_section05">hello</div>
-    <!-- section 6 -->
-    <div class="div_section06">hello</div>
-    <!-- footer -->
+    <!-- /TEST SEC 03 -->
+    <!-- FOOTER -->
     <footer class="footer">
       <nav class="nav_footer">footer nav</nav>
     </footer>
+    <!-- /FOOTER -->
 
-    <!-- scripts. uncomment for server stuff -->
-    <script src="./jsMain.js" type="defer"></script>
-    <!-- <py-config src="./pyscript.toml"></py-config>
-    <py-script src="./pyMain.py"></py-script> -->
+    <!-- SCRIPTS -->
+    <!-- MAIN js -->
+    <script src="./jsMain.js"></script>
+    <!-- MODULES js -->
+    <!-- SHOELACE -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"
+    ></script>
+    <!-- SWIPER js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- initialise Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        cssMode: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+
+        // autoplay: {
+        //   delay: 2000,
+        //   disableOnInteraction: false,
+        // },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <!-- PYSCRIPT (server stuff) -->
+    <!-- <script defer src="https://pyscript.net/latest/pyscript.js"></script>  -->
+    <!-- <py-config src="./pyscript.toml"></py-config> -->
+    <!-- <py-script src="./pyMain.py"></py-script> -->
   </body>
 </html>
