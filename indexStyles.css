@@ -1,7 +1,6 @@
-/* root (all) */
-
+/* --------------------------------------------------------------------------------------- */
+/* UNIVERSAL */
 :root {
-  /*  */
   font-family: Arial, Helvetica, sans-serif;
   /* padding sohuld default 24px */
   --varPadding: 24px;
@@ -12,17 +11,350 @@
   box-sizing: border-box;
 }
 
-/* outlines */
-
 .debug {
   margin: 0px;
   padding: 0px;
-  border-color: red;
+  border-color: hsla(0, 100%, 50%, 0.25);
   border-width: 1px;
   border-style: solid;
 }
 
-/* shoelace */
+body {
+  margin: 0px;
+}
+
+h1 {
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h3 {
+}
+
+h4 {
+}
+
+.subHeading02 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.subHeading03 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.boldText {
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------------------- */
+/* HEADER */
+.header {
+  background-color: hsla(0, 0%, 70%, 1);
+  padding-left: var(--varPadding);
+  padding-right: var(--varPadding);
+}
+/* NAV HEADER */
+.nav_header {
+  background-color: hsla(0, 0%, 90%, 1);
+  display: flex;
+  justify-content: space-between;
+  height: 55px;
+}
+.div_headerLogoBB {
+  width: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.img_headerLogo {
+  width: 100%;
+  object-fit: cover;
+}
+
+.div_headerLinksBB {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.div_navLinksBB {
+  margin-left: 16px;
+}
+.a_navLinks {
+  text-decoration: none;
+  color: black;
+}
+.span_navLinkTextStyling {
+  color: green;
+}
+.div_headerNavHB {
+  display: none;
+}
+
+.btn_HBtest {
+  padding: 5px;
+  margin: 0px;
+}
+
+/* --------------------------------------------------------------------------------------- */
+/* SEC 01 */
+.d_sec01 {
+  background-color: hsla(0, 100%, 70%, 0.5);
+  padding-left: var(--varPadding);
+  padding-right: var(--varPadding);
+  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: left;
+}
+
+.d_sec01_bb_video {
+  background-color: hsla(25, 100%, 70%, 0.5);
+  grid-area: 1 / 1;
+  display: flex;
+  justify-content: center;
+  /* width: 100%; accounts for vert scroll bar where as vw does not */
+  width: 100%;
+  /* 100vw - global padding. chrome was just messing up */
+  /* width: calc(100% - calc(2 * 25px)); */
+  height: 300px;
+}
+
+.d_sec01_bb_text-video-overlay {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  /* align-items: start; */
+  width: auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.d_sec01_bb_btn {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding: 10px;
+}
+
+.d_sec01_btn {
+  background-color: lightgray;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.d_sec01_btn_img {
+  width: 10px;
+  height: 10px;
+  background-color: darkgray;
+  border-radius: 5px;
+}
+
+/* --------------------------------------------------------------------------------------- */
+/* SEC 02 */
+.d_sec02 {
+  background-color: hsla(50, 100%, 70%, 0.5);
+  padding-left: var(--varPadding);
+  padding-right: var(--varPadding);
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--varPadding);
+  padding-bottom: var(--varPadding);
+}
+
+.s_sec02_bb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.art_sec02 {
+  /* do mins/maxes */
+  width: auto;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+/* --------------------------------------------------------------------------------------- */
+/* SEC 03 */
+.d_sec03 {
+  background-color: hsla(100, 100%, 70%, 0.5);
+  padding-left: var(--varPadding);
+  padding-right: var(--varPadding);
+  padding-top: var(--varPadding);
+  padding-bottom: var(--varPadding);
+  display: flex;
+  /* flex-direction: column; */
+}
+
+/* --------------------------------------------------------------------------------------- */
+/* SEC 04 */
+
+.d_sec04 {
+  background-color: hsla(150, 100%, 70%, 0.5);
+  padding-left: var(--varPadding);
+  padding-right: var(--varPadding);
+  padding-top: var(--varPadding);
+  padding-bottom: var(--varPadding);
+  display: flex;
+  flex-direction: column;
+}
+
+.d_sec04_bb_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.d_sec04_bb_largeGallery {
+  background-color: hsla(175, 100%, 70%, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* height: 200px; */
+}
+
+.d_sec04_btn_overwrite {
+  /*  */
+}
+
+.d_sec04_btn_img_overwrite {
+  /*  */
+}
+/* --------------------------------------------------------------------------------------- */
+/* SEC 05 */
+.d_sec05 {
+  background-color: hsla(200, 100%, 70%, 0.5);
+  padding-left: var(--varPadding);
+  padding-right: var(--varPadding);
+  padding-top: var(--varPadding);
+  padding-bottom: var(--varPadding);
+  display: flex;
+  flex-direction: column;
+  /* for testing. remove for ship */
+}
+
+.d_sec05_bb_both {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* have to set for the space-between. alternative could be create spacer div to certain height */
+  height: 400px;
+}
+
+.d_sec05_bb_main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* for testing. remove for ship */
+  /* height: 500px; */
+}
+
+/* fix <410 responsiveness with inside content has to shrink */
+.d_sec05_bb_mainLeft {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+.d_sec05_bb_h2 {
+  display: flex;
+}
+
+#h2_sec05 {
+  font-size: 32px;
+}
+
+/* fix <410 responsiveness with inside content has to shrink */
+.d_sec05_bb_mainRight {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.d_sec05_logoHeight {
+  height: 20px;
+  /* overflow: hidden; */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.d_sec05_logoImage {
+  height: 100%;
+}
+
+.d_sec05_bb_mainRight_top {
+  display: flex;
+  flex-direction: row;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.d_sec05_bb_mainRight_bottom {
+  display: flex;
+  flex-direction: row;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.d_sec05_bodyText {
+  /* stand-in. replace for ship */
+  width: 100%;
+  padding-top: 50px;
+}
+
+.d_sec05_bb_loopyThingy {
+  background-color: aliceblue;
+}
+
+@media screen and (max-width: 937px) {
+  .d_sec05_bb_main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .d_sec05_bb_mainLeft {
+    align-items: center;
+    padding-right: 0px;
+  }
+}
+
+/* --------------------------------------------------------------------------------------- */
+/* CHAT BOX */
+
+/* --------------------------------------------------------------------------------------- */
+/* FOOTER */
+.footer {
+  background-color: hsla(0, 0%, 70%, 1);
+}
+.nav_footer {
+  background-color: hsla(0, 0%, 90%, 1);
+}
+
+/* --------------------------------------------------------------------------------------- */
+/* SHOELACE */
 sl-card,
 sl-carousel {
   border-color: purple;
@@ -103,15 +435,13 @@ sl-carousel {
   padding: 10px;
 }
 
-/* shoelace end */
-
+/* --------------------------------------------------------------------------------------- */
+/* SWIPER */
 .d_swiperParent {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-/* swiper start */
 
 .swiper {
 }
@@ -146,228 +476,8 @@ sl-carousel {
   background-color: green;
 }
 
-/* dont need */
-.swiper-slide img {
-  /* display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; */
-}
-/* swiper end */
-
-body {
-  /* display: flex;
-  flex-direction: column; */
-  margin: 0px;
-}
-
-/* semantic text styles */
-
-h1 {
-}
-
-h2 {
-  font-weight: 400;
-}
-
-h3 {
-}
-
-h4 {
-}
-
-/* header */
-.header {
-  background-color: hsla(0, 0%, 70%, 1);
-  padding-left: var(--varPadding);
-  padding-right: var(--varPadding);
-}
-.nav_header {
-  background-color: hsla(0, 0%, 90%, 1);
-  display: flex;
-  justify-content: space-between;
-  height: 55px;
-}
-.div_headerLogoBB {
-  width: 25px;
-  display: flex;
-  align-items: center;
-}
-
-.img_headerLogo {
-  width: 100%;
-  object-fit: cover;
-}
-
-.div_headerLinksBB {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.div_navLinksBB {
-  margin-left: 16px;
-}
-.a_navLinks {
-  text-decoration: none;
-  color: black;
-}
-.span_navLinkTextStyling {
-  color: green;
-}
-.div_headerNavHB {
-  display: none;
-}
-
-.btn_HBtest {
-  padding: 5px;
-  margin: 0px;
-}
-
-/* media query 425px turn into hamburger*/
-@media screen and (max-width: 426px) {
-  .div_headerLinksBB {
-    display: none;
-  }
-  .div_headerNavHB {
-    display: flex;
-    align-items: center;
-  }
-}
-/* universal */
-.subHeading02 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.subHeading03 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.boldText {
-  font-weight: 600;
-}
-
-/* SEC 01 */
-.d_sec01 {
-  background-color: hsla(25, 100%, 70%, 0.5);
-  padding-left: var(--varPadding);
-  padding-right: var(--varPadding);
-  display: flex;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: left;
-}
-
-.d_sec01_bb_video {
-  background-color: hsla(50, 100%, 70%, 0.5);
-  grid-area: 1 / 1;
-  display: flex;
-  justify-content: center;
-  /* width: 100%; accounts for vert scroll bar where as vw does not */
-  width: 100%;
-  /* 100vw - global padding. chrome was just messing up */
-  /* width: calc(100% - calc(2 * 25px)); */
-  height: 300px;
-}
-
-.d_sec01_bb_text-video-overlay {
-  grid-area: 1 / 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  /* align-items: start; */
-  width: auto;
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
-
-.d_sec01_bb_btn {
-  grid-area: 1 / 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
-  padding: 10px;
-}
-
-.d_sec01_btn {
-  background-color: lightgray;
-  color: white;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.d_sec01_btn_img {
-  width: 10px;
-  height: 10px;
-  background-color: darkgray;
-  border-radius: 5px;
-}
-
 /* --------------------------------------------------------------------------------------- */
-/* SEC 02 */
-.d_sec02 {
-  background-color: hsla(75, 100%, 70%, 0.5);
-  padding-left: var(--varPadding);
-  padding-right: var(--varPadding);
-  display: flex;
-  flex-direction: column;
-  padding-top: var(--varPadding);
-  padding-bottom: var(--varPadding);
-}
-
-.s_sec02_bb {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.art_sec02 {
-  /* do mins/maxes */
-  width: auto;
-  padding-top: 10px;
-  padding-bottom: 30px;
-}
-
-/* --------------------------------------------------------------------------------------- */
-
-.div_section02 {
-  background-color: hsla(0, 0%, 90%, 1);
-  padding-left: var(--varPadding);
-  padding-right: var(--varPadding);
-}
-/* section 3 */
-.div_section03 {
-  background-color: hsla(0, 0%, 70%, 1);
-  padding-left: var(--varPadding);
-  padding-right: var(--varPadding);
-}
-/* section 4 */
-.div_section04 {
-  background-color: hsla(0, 0%, 90%, 1);
-  padding-left: var(--varPadding);
-  padding-right: var(--varPadding);
-}
-/* section 5 */
-.div_section05 {
-  background-color: hsla(0, 0%, 70%, 1);
-  padding-left: var(--varPadding);
-  padding-right: var(--varPadding);
-}
-/* section 6 */
-.div_section06 {
-  background-color: hsla(0, 0%, 90%, 1);
-  padding-left: var(--varPadding);
-  padding-right: var(--varPadding);
-}
-/* footer */
-.footer {
-  background-color: hsla(0, 0%, 70%, 1);
-}
-.nav_footer {
-  background-color: hsla(0, 0%, 90%, 1);
-}
+/* TESTS */
 
 /* sec 4a */
 
@@ -436,3 +546,17 @@ h4 {
   width: 50px;
   height: 50px;
 }
+
+/* --------------------------------------------------------------------------------------- */
+/* MEDIA QUERIES */
+/* media query 425px turn into hamburger*/
+@media screen and (max-width: 426px) {
+  .div_headerLinksBB {
+    display: none;
+  }
+  .div_headerNavHB {
+    display: flex;
+    align-items: center;
+  }
+}
+/* --------------------------------------------------------------------------------------- */
