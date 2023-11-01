@@ -103,8 +103,6 @@ h4 {
 /* SEC 01 */
 .d_sec01 {
   background-color: hsla(0, 100%, 70%, 0.5);
-  padding-left: var(--varPadding);
-  padding-right: var(--varPadding);
   display: flex;
   display: grid;
   grid-template-columns: 1fr;
@@ -124,6 +122,8 @@ h4 {
 }
 
 .d_sec01_bb_text-video-overlay {
+  padding-left: var(--varPadding);
+  padding-right: var(--varPadding);
   grid-area: 1 / 1;
   display: flex;
   flex-direction: column;
@@ -135,6 +135,8 @@ h4 {
 }
 
 .d_sec01_bb_btn {
+  padding-left: var(--varPadding);
+  padding-right: var(--varPadding);
   grid-area: 1 / 1;
   display: flex;
   flex-direction: column;
@@ -243,13 +245,11 @@ h4 {
 }
 
 .d_sec05_bb_both {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* have to set for the space-between. alternative could be create spacer div to certain height */
-  height: 400px;
 }
 
 .d_sec05_bb_main {
@@ -286,7 +286,6 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -296,6 +295,9 @@ h4 {
   /* overflow: hidden; */
   padding-left: 10px;
   padding-right: 10px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 .d_sec05_logoImage {
@@ -305,6 +307,8 @@ h4 {
 .d_sec05_bb_mainRight_top {
   display: flex;
   flex-direction: row;
+  gap: 20px;
+  justify-content: center;
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 10px;
@@ -322,23 +326,15 @@ h4 {
 
 .d_sec05_bodyText {
   /* stand-in. replace for ship */
-  width: 100%;
+  display: flex;
+
   padding-top: 50px;
 }
 
 .d_sec05_bb_loopyThingy {
   background-color: aliceblue;
-}
-
-@media screen and (max-width: 937px) {
-  .d_sec05_bb_main {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .d_sec05_bb_mainLeft {
-    align-items: center;
-    padding-right: 0px;
-  }
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 /* --------------------------------------------------------------------------------------- */
@@ -346,11 +342,18 @@ h4 {
 
 /* --------------------------------------------------------------------------------------- */
 /* FOOTER */
-.footer {
-  background-color: hsla(0, 0%, 70%, 1);
+.f_footer_bb {
+  background-color: hsla(250, 100%, 70%, 0.5);
+  padding-left: var(--varPadding);
+  padding-right: var(--varPadding);
+  padding-top: var(--varPadding);
+  padding-bottom: var(--varPadding);
+  display: flex;
+  flex-direction: column;
 }
-.nav_footer {
-  background-color: hsla(0, 0%, 90%, 1);
+
+.n_footer {
+  /* back */
 }
 
 /* --------------------------------------------------------------------------------------- */
@@ -557,6 +560,17 @@ sl-carousel {
   .div_headerNavHB {
     display: flex;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 937px) {
+  .d_sec05_bb_main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .d_sec05_bb_mainLeft {
+    align-items: center;
+    padding-right: 0px;
   }
 }
 /* --------------------------------------------------------------------------------------- */
