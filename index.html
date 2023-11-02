@@ -179,15 +179,15 @@
     </div>
     <!-- /SEC 05 -->
     <!-- FOOTER -->
-    <footer class="debug f_footer_bb">
+    <footer class="debug f_footer_bb" id="footerStart">
       <nav class="debug n_footer_overwrite">
         <div class="debug d_bb_footerNavLeft">
-          <div class="div_headerLogoBB debug">
-            <a href="#"
+          <div class="debug d_n_f_bb_curtinLogo">
+            <a href="https://www.curtin.edu.au/" target="_blank"
               ><img
-                src="./image/testImg.png"
-                alt="logo in header"
-                class="img_headerLogo debug"
+                src="./image/logo/primary-logoWhite.svg"
+                alt="site logo"
+                class="img_headerLogo debug i_logo_overwrite"
             /></a>
           </div>
           <div class="d_f_n_bb_links debug">
@@ -225,16 +225,16 @@
             </div>
           </div>
         </div>
-        <div class="div_headerLogoBB debug">
-          <a href="#"
+        <div class="debug d_n_f_bb_curtinLogo">
+          <a href="https://www.curtin.edu.au/" target="_blank"
             ><img
-              src="./image/testImg.png"
+              src="./image/logo/curtinUniversityLogoBW.png"
               alt="curtin university logo"
-              class="img_headerLogo debug"
+              class="img_headerLogo debug bwOverwrite"
           /></a>
         </div>
       </nav>
-      <div class="debug s_abnOverwrite">
+      <div class="debug s_abnOverwriteColour d_bb_acknowledgment">
         Curtin University acknowledges the Whadjuk Noongar people as the
         traditional custodians of the land on which we are situated, and pay our
         respects to their Elders both past and present. Curtin Univserity also
@@ -242,7 +242,7 @@
         Torres Strait Islander community, and would like the extend our respects
         to these people also.
       </div>
-      <div class="debug">---------</div>
+      <sl-divider class="sl_divider"></sl-divider>
       <div class="debug d_f_bb_socialMedia">
         <div class="debug d_BB_socialLinks">
           <a
@@ -297,21 +297,193 @@
           </a>
         </div>
       </div>
-      <div class="debug">---------</div>
+      <sl-divider class="sl_divider"></sl-divider>
       <nav class="debug n_f_moreNav">
-        <a href="#" class="debug s_linkOverwrite smallText">Copyright</a>
-        <a href="#" class="debug s_linkOverwrite smallText">Legal</a>
-        <a href="#" class="debug s_linkOverwrite smallText">Privacy</a>
-        <a href="#" class="debug s_linkOverwrite smallText">Accessability</a>
-        <!-- sl button thing -->
-        <div class="debug s_linkOverwrite smallText">Sitemap</div>
+        <a
+          href="https://www.curtin.edu.au/copyright-statement/"
+          class="debug s_linkOverwrite smallText smallTextOverwrite"
+          target="_blank"
+          >Copyright</a
+        >
+        <a
+          href="#footerStart"
+          class="debug s_linkOverwrite smallText smallTextOverwrite"
+          >Legal</a
+        >
+        <a
+          href="https://informationmanagement.curtin.edu.au/privacy/"
+          class="debug s_linkOverwrite smallText smallTextOverwrite"
+          target="_blank"
+          >Privacy</a
+        >
+        <a
+          href="#footerStart"
+          class="debug s_linkOverwrite smallText smallTextOverwrite"
+          >Accessability</a
+        >
+        <!-- collapse button -->
+        <button
+          class="btn_collapsable debug s_linkOverwrite smallText smallTextOverwrite"
+        >
+          Sitemap
+        </button>
+        <!--  -->
       </nav>
+      <div class="debug btn_collapsable_inside">
+        <div class="debug d_sec05_bb_sitemap">
+          <div class="debug">
+            <!-- all tree element links fail on enter key -->
+            <!-- tree 01 -->
+            <sl-tree class="debug">
+              <sl-tree-item>
+                <span class="s_textOverwrite">Navigation</span>
+                <sl-tree-item>
+                  <a href="#" class="a_navLinks"
+                    ><span class="span_navLinkTextStyling s_linkOverwrite debug"
+                      >Graduates</span
+                    >
+                  </a>
+                </sl-tree-item>
+                <sl-tree-item>
+                  <a href="#" class="a_navLinks"
+                    ><span class="span_navLinkTextStyling s_linkOverwrite debug"
+                      >About Us</span
+                    >
+                  </a>
+                </sl-tree-item>
+                <sl-tree-item>
+                  <a href="#" class="a_navLinks"
+                    ><span class="span_navLinkTextStyling s_linkOverwrite debug"
+                      >News</span
+                    >
+                  </a>
+                </sl-tree-item>
+                <sl-tree-item>
+                  <a href="#" class="a_navLinks"
+                    ><span class="span_navLinkTextStyling s_linkOverwrite debug"
+                      >Contact</span
+                    >
+                  </a>
+                </sl-tree-item>
+                <sl-tree-item>
+                  <a href="#" class="a_navLinks"
+                    ><span class="span_navLinkTextStyling s_linkOverwrite debug"
+                      >Curtin University</span
+                    >
+                  </a>
+                </sl-tree-item>
+              </sl-tree-item>
+            </sl-tree>
+          </div>
+          <!--  -->
+          <div class="debug">
+            <sl-tree>
+              <sl-tree-item>
+                <span class="s_textOverwrite">Homepage</span>
+
+                <sl-tree-item>Section 01</sl-tree-item>
+                <sl-tree-item>Section 02</sl-tree-item>
+                <sl-tree-item>Section 03</sl-tree-item>
+                <sl-tree-item>Section 04</sl-tree-item>
+                <sl-tree-item>Section 05</sl-tree-item>
+              </sl-tree-item>
+            </sl-tree>
+          </div>
+          <!--  -->
+          <div class="debug">
+            <sl-tree>
+              <sl-tree-item>
+                <span class="s_textOverwrite">Social Media</span>
+
+                <sl-tree-item>
+                  <a
+                    href="https://www.linkedin.com/school/curtinuniversity/"
+                    class="debug"
+                    target="_blank"
+                    ><span class="span_navLinkTextStyling s_linkOverwrite debug"
+                      >LinkedIn</span
+                    >
+                  </a>
+                </sl-tree-item>
+                <sl-tree-item>
+                  <a
+                    href="https://www.instagram.com/curtinuniversity/"
+                    class="debug"
+                    target="_blank"
+                    ><span class="span_navLinkTextStyling s_linkOverwrite debug"
+                      >Instagram</span
+                    >
+                  </a>
+                </sl-tree-item>
+                <sl-tree-item>
+                  <a
+                    href="https://twitter.com/DIGDesignCurtin"
+                    class="debug"
+                    target="_blank"
+                    ><span class="span_navLinkTextStyling s_linkOverwrite debug"
+                      >Twitter</span
+                    >
+                  </a>
+                </sl-tree-item>
+                <sl-tree-item>
+                  <a
+                    href="https://www.youtube.com/user/CurtinUniversity"
+                    class="debug"
+                    target="_blank"
+                    ><span class="span_navLinkTextStyling s_linkOverwrite debug"
+                      >YouTube</span
+                    >
+                  </a>
+                </sl-tree-item>
+              </sl-tree-item>
+            </sl-tree>
+          </div>
+          <div class="debug">
+            <sl-tree>
+              <sl-tree-item>
+                <span class="s_textOverwrite">Other</span>
+                <sl-tree-item>
+                  <a
+                    href="#footerStart"
+                    class="debug s_linkOverwrite smallText smallTextOverwrite"
+                    >Legal</a
+                  ></sl-tree-item
+                >
+                <sl-tree-item>
+                  <a
+                    href="https://informationmanagement.curtin.edu.au/privacy/"
+                    class="debug s_linkOverwrite smallText smallTextOverwrite"
+                    target="_blank"
+                    >Privacy</a
+                  ></sl-tree-item
+                >
+                <sl-tree-item>
+                  <a
+                    href="#footerStart"
+                    class="debug s_linkOverwrite smallText smallTextOverwrite"
+                    >Accessability</a
+                  ></sl-tree-item
+                >
+                <sl-tree-item>
+                  <a
+                    href="#footerStart"
+                    class="debug s_linkOverwrite smallText smallTextOverwrite"
+                    >Certification</a
+                  ></sl-tree-item
+                >
+              </sl-tree-item>
+            </sl-tree>
+          </div>
+        </div>
+      </div>
       <div class="debug d_f_bb_abn">
-        <span class="debug smallText s_abnOverwrite">ABN 99 143 842 569</span>
-        <span class="debug smallText s_abnOverwrite"
+        <span class="debug smallText s_abnOverwriteColour"
+          >ABN 99 143 842 569</span
+        >
+        <span class="debug smallText s_abnOverwriteColour"
           >CRICOS Provider Code 00301J</span
         >
-        <span class="debug smallText s_abnOverwrite">TEQSA PRV12158</span>
+        <span class="debug smallText s_abnOverwriteColour">TEQSA PRV12158</span>
         <a href="#" class="debug smallText smallText_overwrite"
           >Certified in web accessability</a
         >

@@ -7,6 +7,8 @@
   --squareWidthToAdjHeight: 250px;
   /* change to opac 1 for ship */
   --footerWhiteColour: hsla(0, 0%, 96%, 1);
+  --footerGreyColour: hsla(0, 0%, 33%, 1);
+  --footerBkgColour: hsla(0, 0%, 4%, 1);
 }
 
 * {
@@ -16,7 +18,7 @@
 .debug {
   margin: 0px;
   padding: 0px;
-  border-color: hsla(0, 100%, 50%, 0.25);
+  border-color: hsla(0, 100%, 50%, 0.125);
   border-width: 1px;
   border-style: solid;
 }
@@ -87,7 +89,7 @@ h4 {
   align-items: center;
 }
 .div_navLinksBB {
-  margin-left: 16px;
+  /* margin-left: 16px; */
 }
 .a_navLinks {
   text-decoration: none;
@@ -349,7 +351,7 @@ h4 {
 /* --------------------------------------------------------------------------------------- */
 /* FOOTER */
 .f_footer_bb {
-  background-color: hsla(0, 0%, 4%, 1);
+  background-color: var(--footerBkgColour);
   /* so i can see what im doing colour */
   /* background-color: hsla(0, 0%, 60%, 1); */
   padding-left: var(--varPadding);
@@ -358,7 +360,8 @@ h4 {
   padding-bottom: var(--varPadding);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  /* use padding bc dropdown */
+  /* gap: 10px; */
 }
 
 .n_footer {
@@ -368,18 +371,21 @@ h4 {
 .d_bb_footerNavLeft {
   display: flex;
   flex-direction: row;
+  gap: 40px;
 }
 
 .d_f_n_bb_links {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 20px;
 }
 
 .n_footer_overwrite {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 40px;
 }
 
 .d_f_bb_socialMedia {
@@ -401,9 +407,18 @@ h4 {
   text-decoration: solid;
 }
 
-.s_abnOverwrite {
+.s_abnOverwriteColour {
   /* colour of abn items but also acknowledgement of country */
-  color: hsla(0, 0%, 33%, 1);
+  color: var(--footerGreyColour);
+}
+
+.d_bb_acknowledgment {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 12px;
+  width: calc(calc(100% * 0.66) - 100vw);
+  --widthTest: 100%;
+  width: calc(var(--widthTest));
 }
 
 .d_f_bb_abn {
@@ -412,10 +427,11 @@ h4 {
   justify-content: left;
   gap: 20px;
   align-items: baseline;
+  padding-top: 20px;
 }
 
 .smallText_overwrite {
-  font-size: 8px;
+  font-size: 9px;
   color: var(--footerWhiteColour);
 }
 
@@ -423,10 +439,85 @@ h4 {
   min-width: 25px;
   max-width: 30px;
   object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .i_f_socialsImg {
   width: 100%;
+  display: flex;
+}
+
+.btn_collapsable {
+  background-color: unset;
+  color: var(--footerWhiteColour);
+}
+
+.btn_collapsable:hover {
+  cursor: pointer;
+}
+
+.btn_collapsable_inside {
+  padding-top: 0px;
+  /* background-color: darkgray; */
+  display: none;
+  overflow: hidden;
+  height: fit-content;
+  /* max-height: 0;
+  transition: max-height 0.33s ease-out; */
+}
+
+.d_sec05_bb_sitemap {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: top;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* justify-content: space-evenly; */
+}
+
+sl-tree-item::part(label) {
+  color: var(--footerWhiteColour);
+  font-weight: 100;
+}
+
+.s_textOverwrite {
+  font-weight: 700;
+}
+
+sl-tree-item::part(item--selected) {
+  background-color: unset;
+}
+
+sl-tree-item::part(item) {
+  padding-right: 20px;
+}
+
+.sl_divider {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-color: var(--footerGreyColour);
+  border-color: hsla(0, 0%, 20%, 1);
+}
+
+.d_n_f_bb_curtinLogo {
+  display: flex;
+  align-items: center;
+}
+
+.bwOverwrite {
+  height: 30px;
+}
+
+.i_logo_overwrite {
+  height: 25px;
+}
+
+.smallTextOverwrite {
+  font-size: 14px;
 }
 
 /* --------------------------------------------------------------------------------------- */
