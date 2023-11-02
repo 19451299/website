@@ -1,14 +1,16 @@
 /* --------------------------------------------------------------------------------------- */
 /* UNIVERSAL */
 :root {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   /* padding sohuld default 24px */
   --varPadding: 24px;
-  --squareWidthToAdjHeight: 250px;
-  /* change to opac 1 for ship */
+  /* ? */
+  /* --squareWidthToAdjHeight: 200px; */
   --footerWhiteColour: hsla(0, 0%, 96%, 1);
   --footerGreyColour: hsla(0, 0%, 33%, 1);
   --footerBkgColour: hsla(0, 0%, 4%, 1);
+  --textGreyColour: hsla(0, 0%, 75%, 1);
+  --textGreyColourDarker: hsla(0, 0%, 33%, 1);
 }
 
 * {
@@ -27,22 +29,26 @@ body {
   margin: 0px;
 }
 
-h1 {
-}
+/* h1 {
+} */
 
 h2 {
   font-weight: 400;
 }
 
-h3 {
-}
+/* h3 {
+} */
 
-h4 {
-}
+/* h4 {
+} */
 
 .subHeading02 {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.subHeading02_Overwrite {
+  font-size: 38px;
 }
 
 .subHeading03 {
@@ -51,11 +57,19 @@ h4 {
 }
 
 .boldText {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .smallText {
   font-size: 12px;
+}
+
+.greyText {
+  color: var(--textGreyColour);
+}
+
+.greyTextDarker {
+  color: var(--textGreyColourDarker);
 }
 
 /* --------------------------------------------------------------------------------------- */
@@ -71,9 +85,10 @@ h4 {
   display: flex;
   justify-content: space-between;
   height: 55px;
+  gap: 40px;
 }
-.div_headerLogoBB {
-  width: 25px;
+.d_nav_img_bb_logo {
+  /* height: 25px; */
   display: flex;
   align-items: center;
 }
@@ -83,14 +98,17 @@ h4 {
   object-fit: cover;
 }
 
+/* .img_logo_overwrite {
+  height: 25px;
+} */
+
 .div_headerLinksBB {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 20px;
 }
-.div_navLinksBB {
-  /* margin-left: 16px; */
-}
+
 .a_navLinks {
   text-decoration: none;
   color: black;
@@ -170,7 +188,7 @@ h4 {
 /* --------------------------------------------------------------------------------------- */
 /* SEC 02 */
 .d_sec02 {
-  background-color: hsla(50, 100%, 70%, 0.5);
+  /* background-color: hsla(50, 100%, 70%, 0.5); */
   padding-left: var(--varPadding);
   padding-right: var(--varPadding);
   display: flex;
@@ -183,11 +201,12 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 
 .art_sec02 {
-  /* do mins/maxes */
-  width: auto;
+  /* width? */
+  width: 75%;
   padding-top: 10px;
   padding-bottom: 30px;
 }
@@ -195,7 +214,8 @@ h4 {
 /* --------------------------------------------------------------------------------------- */
 /* SEC 03 */
 .d_sec03 {
-  background-color: hsla(100, 100%, 70%, 0.5);
+  /* background-color: hsla(100, 100%, 70%, 0.5); */
+  background-color: hsla(0, 0%, 96%, 1);
   padding-left: var(--varPadding);
   padding-right: var(--varPadding);
   padding-top: var(--varPadding);
@@ -208,13 +228,15 @@ h4 {
 /* SEC 04 */
 
 .d_sec04 {
-  background-color: hsla(150, 100%, 70%, 0.5);
+  /* background-color: hsla(150, 100%, 70%, 0.5); */
   padding-left: var(--varPadding);
   padding-right: var(--varPadding);
   padding-top: var(--varPadding);
   padding-bottom: var(--varPadding);
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  height: fit-content;
 }
 
 .d_sec04_bb_title {
@@ -224,27 +246,126 @@ h4 {
 }
 
 .d_sec04_bb_largeGallery {
-  background-color: hsla(175, 100%, 70%, 0.5);
+  /* background-color: hsla(175, 100%, 70%, 0.5); */
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* height: 200px; */
+  /* testing */
+  height: fit-content;
+  /* height: 1000px; */
+  /* width: 700px; */
 }
 
-.d_sec04_btn_overwrite {
-  /*  */
+.sl-carousel_outer {
+  width: 90vw;
+  max-width: 1000px;
+  --aspect-ratio: 1/1;
+  height: 100%;
 }
 
-.d_sec04_btn_img_overwrite {
-  /*  */
+.sl-carousel_outer::part(base) {
+  gap: 0px;
+  /* background-color: aqua; */
+  /* height: 300px; */
+  /* display: grid; */
+  /* height: 1000px; */
+  display: grid;
+  /* height: fit-content; */
+  padding-top: 5vw;
+  padding-bottom: 5vw;
 }
+
+.sl-carousel_outer::part(scroll-container) {
+  /* background-color: red; */
+  /* height: 300px; */
+  /* height: 90%; */
+  --slides-per-page: 3;
+  /* genius idea by me, but showing the overflow breaks the gallery (doenst slide) */
+  /* overflow: visible; */
+}
+
+.sl-carousel-item_card {
+  height: fit-content;
+}
+
+.sl_card_sec04 {
+  height: fit-content;
+}
+
+.sl_card_sec04::part(body) {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sl_carousel_sec04 {
+  --aspect-ratio: 1/1;
+  width: var(--squareWidthToAdjHeight);
+  width: auto;
+  height: auto;
+}
+
+.sl_carousel_sec04::part(base) {
+  border-color: orange;
+  border-width: 2px;
+  border-style: solid;
+  /* ------- */
+  display: grid;
+  gap: 0px;
+  grid-template-columns: 1fr;
+  /* grid-template-rows: 1fr; */
+  /* ------- */
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; */
+}
+
+.sl_carousel_sec04::part(scroll-container) {
+  border-color: blue;
+  border-width: 2px;
+  border-style: solid;
+  /* display: grid; */
+  grid-area: 1 / 1;
+  gap: 0px;
+}
+
+.sl_carousel_sec04::part(pagination) {
+  border-color: green;
+  border-width: 2px;
+  border-style: solid;
+  grid-area: 1 / 1;
+  position: absolute;
+  /* bottom: calc(20px + calc(-1 * calc(var(--squareWidthToAdjHeight) / 2))); */
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.sl_carousel_sec04::part(pagination-item) {
+  padding: 0px;
+  border-radius: 100%;
+  --dimensions: 8px;
+  width: var(--dimensions);
+  height: var(--dimensions);
+}
+
+.d_carousel_studentName {
+  --paddingVal: 2.5%;
+  padding-top: var(--paddingVal);
+  padding-bottom: var(--paddingVal);
+  font-size: 1.5vw;
+  font-size: clamp(12px, 1.5vw, 18px);
+}
+
 /* --------------------------------------------------------------------------------------- */
 /* SEC 05 */
 .d_sec05 {
-  background-color: hsla(200, 100%, 70%, 0.5);
-  padding-left: var(--varPadding);
-  padding-right: var(--varPadding);
+  /* background-color: hsla(200, 100%, 70%, 0.5); */
+  background-color: hsla(0, 0%, 96%, 1);
   padding-top: var(--varPadding);
   padding-bottom: var(--varPadding);
   display: flex;
@@ -258,6 +379,7 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .d_sec05_bb_main {
@@ -268,6 +390,8 @@ h4 {
   grid-template-columns: 1fr 1fr;
   /* for testing. remove for ship */
   /* height: 500px; */
+  padding-left: var(--varPadding);
+  padding-right: var(--varPadding);
 }
 
 /* fix <410 responsiveness with inside content has to shrink */
@@ -278,6 +402,7 @@ h4 {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-right: 20px;
+  gap: 20px;
 }
 
 .d_sec05_bb_h2 {
@@ -333,16 +458,14 @@ h4 {
 }
 
 .d_sec05_bodyText {
-  /* stand-in. replace for ship */
   display: flex;
-
-  padding-top: 50px;
+  /* padding-top: 50px; */
 }
 
 .d_sec05_bb_loopyThingy {
-  background-color: aliceblue;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  background-color: lightblue;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /* --------------------------------------------------------------------------------------- */
@@ -521,14 +644,39 @@ sl-tree-item::part(item) {
 }
 
 /* --------------------------------------------------------------------------------------- */
-/* SHOELACE */
-sl-card,
-sl-carousel {
-  border-color: purple;
-  border-width: 2px;
-  border-style: solid;
+/* MEDIA QUERIES */
+/* media query 425px turn into hamburger*/
+@media screen and (max-width: 937px) {
+  .d_sec05_bb_main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .d_sec05_bb_mainLeft {
+    align-items: center;
+    padding-right: 0px;
+  }
 }
 
+@media screen and (max-width: 754px) {
+  .sl-carousel_outer::part(scroll-container) {
+    --slides-per-page: 2;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .div_headerLinksBB {
+    display: none;
+  }
+  .div_headerNavHB {
+    display: flex;
+    align-items: center;
+  }
+  .sl-carousel_outer::part(scroll-container) {
+    --slides-per-page: 1;
+  }
+}
+
+/* ----------- */
 .sl_carouselBIG {
   --aspect-ratio: 1/1;
   width: auto;
@@ -551,190 +699,3 @@ sl-carousel {
   /* transform: scale(1.2);
   transition: 0.4s; */
 }
-
-/* -------- */
-.sl_carouselTest::part(scroll-container) {
-  gap: 0px;
-}
-
-.carousel__slides {
-}
-/* .carousel__slides--horizontal */
-
-.sl_carouselTest {
-  --aspect-ratio: 1/1;
-  width: var(--squareWidthToAdjHeight);
-}
-
-.sl_carouselTest::part(base) {
-  border-color: orange;
-  border-width: 2px;
-  border-style: solid;
-  /* display: block; */
-  display: grid;
-  gap: 0px;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row; */
-}
-
-.sl_carouselTest::part(scroll-container) {
-  border-color: blue;
-  border-width: 2px;
-  border-style: solid;
-  grid-area: 1 / 1;
-}
-
-.sl_carouselTest::part(pagination) {
-  border-color: green;
-  border-width: 2px;
-  border-style: solid;
-  /* works with display block on parent, but child image resizes to not fill square */
-  grid-area: 1 / 1;
-  position: relative;
-  bottom: calc(20px + calc(-1 * calc(var(--squareWidthToAdjHeight) / 2)));
-}
-
-.sl_cardTest::part(body) {
-  padding: 10px;
-}
-
-/* --------------------------------------------------------------------------------------- */
-/* SWIPER */
-.d_swiperParent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper {
-}
-
-.mySwiper {
-}
-
-.swiper-wrapper {
-  align-items: center;
-  border-color: black;
-  border-style: solid;
-  border-width: 3px;
-  display: flex;
-  /* width: 800px; */
-}
-
-/* dont need */
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-  height: fit-content;
-  /* height: 100px;
-  width: 100px; */
-  /* display: block; */
-}
-
-.swiper-slide-active {
-  transform: scale(0.9, 0.9);
-  transition: 0.4s;
-  background-color: green;
-}
-
-/* --------------------------------------------------------------------------------------- */
-/* TESTS */
-
-/* sec 4a */
-
-.d_sec4a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: fit-content;
-  height: fit-content;
-}
-
-.d_sec4a02 {
-  width: fit-content;
-  height: fit-content;
-  padding: 10px;
-}
-
-.sl-carousel_test02 {
-  box-sizing: border-box;
-  border-color: blue;
-  border-width: 1px;
-  border-style: solid;
-  --aspect-ratio: 1/1;
-}
-
-.sl-carousel_test02::part(base) {
-  display: grid;
-}
-
-.sl-carousel_test02::part(scroll-container) {
-  display: grid;
-  --slides-per-page: 3;
-  grid-template-rows: auto;
-}
-
-.sl-carousel_test02::part(scroll-container) {
-  box-sizing: border-box;
-  border-color: orange;
-  border-width: 1px;
-  border-style: solid;
-  /* width: 150px;
-  height: 150px; */
-}
-
-.sl-carousel-item_test02 {
-  box-sizing: border-box;
-  border-color: red;
-  border-width: 1px;
-  border-style: solid;
-}
-
-.sl-carousel-item_test02 {
-}
-
-.sl-carousel-item_test02.--is-active {
-  box-sizing: border-box;
-  border-color: black;
-  border-width: 3px;
-  border-style: solid;
-  /* transform: scale(1.5); */
-}
-
-.d_sl-carousel-item-inside {
-  background-color: lightgray;
-  width: 50px;
-  height: 50px;
-}
-
-/* --------------------------------------------------------------------------------------- */
-/* MEDIA QUERIES */
-/* media query 425px turn into hamburger*/
-@media screen and (max-width: 426px) {
-  .div_headerLinksBB {
-    display: none;
-  }
-  .div_headerNavHB {
-    display: flex;
-    align-items: center;
-  }
-}
-
-@media screen and (max-width: 937px) {
-  .d_sec05_bb_main {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .d_sec05_bb_mainLeft {
-    align-items: center;
-    padding-right: 0px;
-  }
-}
-/* --------------------------------------------------------------------------------------- */

@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Curtin Design</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
     <!-- STYLESHEETS -->
     <!-- MAIN stylesheet -->
     <link rel="stylesheet" href="./indexStyles.css" />
@@ -25,12 +32,13 @@
     <header class="header">
       <!-- NAV -->
       <nav class="nav_header">
-        <div class="div_headerLogoBB">
-          <a href="#"
+        <div class="d_nav_img_bb_logo">
+          <a href="#" target="_blank"
             ><img
-              src="./image/testImg.png"
-              alt="logo in header"
-              class="img_headerLogo"
+              src="./image/logo/primary-logoWhite.svg"
+              alt="site logo"
+              class="img_headerLogo debug i_logo_overwrite"
+              style="filter: brightness(0%)"
           /></a>
         </div>
         <div class="div_headerLinksBB">
@@ -66,7 +74,9 @@
     <div class="d_sec01 debug">
       <div class="debug d_sec01_bb_video">[insert video]</div>
       <div class="debug d_sec01_bb_text-video-overlay">
-        <h2 class="debug subHeading02 boldText">Welcome</h2>
+        <h2 class="debug subHeading02 boldText subHeading02_Overwrite">
+          Welcome
+        </h2>
         <span class="debug boldText">Curtin Graduate Event 2023</span>
       </div>
       <div class="debug d_sec01_bb_btn">
@@ -79,15 +89,19 @@
     <!-- SEC 02 -->
     <div class="debug d_sec02">
       <section class="debug s_sec02_bb">
-        <h2 class="debug subHeading02 boldText">Who are we?</h2>
-        <article class="debug art_sec02">
+        <h2 class="debug subHeading02 boldText greyText subHeading02_Overwrite">
+          Who are we?
+        </h2>
+        <article class="debug art_sec02 greyText">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
           perferendis cupiditate soluta maiores minima officiis rerum facere
           veniam blanditiis quo ex, laboriosam sequi nisi at deleniti facilis
           dicta velit magnam recusandae est voluptates explicabo qui? Dolorum
           quaerat eaque at quisquam.
         </article>
-        <h3 class="debug subHeading03 boldText">See what people are saying</h3>
+        <h3 class="debug subHeading03 boldText greyText">
+          See what people are saying
+        </h3>
       </section>
     </div>
     <!-- /SEC 02 -->
@@ -95,21 +109,211 @@
     <div class="debug d_sec03">
       <div class="debug">text</div>
     </div>
-    <!-- div sec03 bb
-		horiz scrolling wrap-around, loopong, autoplay, box?. shoelace component? cssGrid?
-			[div vert flexbox bb  
-				div horiz flexbox bb 
-						img
-				div horiz flexbox 
-					span (testimonial/social media quote)]* -->
-    <!--  repeat card * as many as needed (shoelace component?). Use js to add element? -->
     <!-- /SEC 03 -->
     <!-- SEC 04 -->
     <div class="debug d_sec04">
       <div class="debug d_sec04_bb_title">
-        <h2 class="debug subHeading02 boldText">Meet the Grads!</h2>
+        <h2 class="debug subHeading02 boldText greyText subHeading02_Overwrite">
+          Meet the Grads!
+        </h2>
       </div>
-      <div class="debug d_sec04_bb_largeGallery">shoelace modified</div>
+      <!-- gallery flexbox -->
+      <div class="debug d_sec04_bb_largeGallery">
+        <!-- when slide change, js event to get data, inc index by 1, then in js scale size of that new sl-gallery-item/element by 1.2 for the centered larger scale effect -->
+        <!-- outer gallery -->
+        <!--           autoplay
+          autoplay-interval="10000"
+        pagination -->
+        <sl-carousel loop pagination class="sl-carousel_outer">
+          <!-- item 1-->
+          <sl-carousel-item class="sl-carousel-item_card">
+            <!-- card 01 -->
+            <sl-card class="debug sl_card_sec04">
+              <sl-carousel
+                pagination
+                loop
+                mouse-dragging
+                class="debug sl_carousel_sec04"
+              >
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+              </sl-carousel>
+              <div class="d_carousel_studentName boldText greyTextDarker">
+                Sarah Connor
+              </div>
+            </sl-card>
+          </sl-carousel-item>
+          <!-- item 2-->
+          <sl-carousel-item class="sl-carousel-item_card">
+            <!-- card 01 -->
+            <sl-card class="debug sl_card_sec04">
+              <sl-carousel
+                pagination
+                loop
+                mouse-dragging
+                class="debug sl_carousel_sec04"
+              >
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+              </sl-carousel>
+              <div class="d_carousel_studentName boldText greyTextDarker">
+                Joe Rogan
+              </div>
+            </sl-card>
+          </sl-carousel-item>
+          <!-- item 3-->
+          <sl-carousel-item class="sl-carousel-item_card">
+            <!-- card 01 -->
+            <sl-card class="debug sl_card_sec04">
+              <sl-carousel
+                pagination
+                loop
+                mouse-dragging
+                class="debug sl_carousel_sec04"
+              >
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+              </sl-carousel>
+              <div class="d_carousel_studentName boldText greyTextDarker">
+                Sarah Connor
+              </div>
+            </sl-card>
+          </sl-carousel-item>
+          <!-- item 4-->
+          <sl-carousel-item class="sl-carousel-item_card">
+            <!-- card 01 -->
+            <sl-card class="debug sl_card_sec04">
+              <sl-carousel
+                pagination
+                loop
+                mouse-dragging
+                class="debug sl_carousel_sec04"
+              >
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+              </sl-carousel>
+              <div class="d_carousel_studentName boldText greyTextDarker">
+                Sarah Connor
+              </div>
+            </sl-card>
+          </sl-carousel-item>
+          <!-- item 5-->
+          <sl-carousel-item class="sl-carousel-item_card">
+            <!-- card 01 -->
+            <sl-card class="debug sl_card_sec04">
+              <sl-carousel
+                pagination
+                loop
+                mouse-dragging
+                class="debug sl_carousel_sec04"
+              >
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+              </sl-carousel>
+              <div class="d_carousel_studentName boldText greyTextDarker">
+                Sarah Connor
+              </div>
+            </sl-card>
+          </sl-carousel-item>
+          <!-- item 6-->
+          <sl-carousel-item class="sl-carousel-item_card">
+            <!-- card 01 -->
+            <sl-card class="debug sl_card_sec04">
+              <sl-carousel
+                pagination
+                loop
+                mouse-dragging
+                class="debug sl_carousel_sec04"
+              >
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+              </sl-carousel>
+              <div class="d_carousel_studentName boldText greyTextDarker">
+                John Kennedy
+              </div>
+            </sl-card>
+          </sl-carousel-item>
+        </sl-carousel>
+        <!-- outer gallery end -->
+      </div>
       <div class="debug d_sec01_bb_btn">
         <button class="debug d_sec01_btn d_sec04_btn_overwrite">
           <!--  -->
@@ -124,12 +328,15 @@
         <div class="debug d_sec05_bb_main">
           <div class="debug d_sec05_bb_mainLeft">
             <div class="debug d_sec05_bb_h2">
-              <h2 class="debug subHeading02 boldText" id="h2_sec05">
+              <h2
+                class="debug subHeading02 boldText subHeading02_Overwrite greyText"
+                id="h2_sec05"
+              >
                 Thanks to our <br />
                 amazing sponsors!
               </h2>
             </div>
-            <div class="debug d_sec05_bodyText">
+            <div class="debug d_sec05_bodyText greyText">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Repellendus nisi asperiores laborum, nesciunt alias voluptatum
               debitis, hic adipisci maiores ad explicabo consectetur sint magnam
@@ -327,7 +534,8 @@
         >
           Sitemap
         </button>
-        <!--  -->
+        <!-- sl-tree internals -->
+        <!-- need to fix in sl-tree, add text click to activate dropdown aswell. -->
       </nav>
       <div class="debug btn_collapsable_inside">
         <div class="debug d_sec05_bb_sitemap">

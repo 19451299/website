@@ -6,7 +6,8 @@
     <title>Document</title>
     <!-- STYLESHEETS -->
     <!-- MAIN stylesheet -->
-    <link rel="stylesheet" href="./indexStyles.css" />
+    <!-- <link rel="stylesheet" href="./indexStyles.css" />
+    <link rel="stylesheet" href="./ssTest.css" /> -->
     <!-- PYSCRIPT stylesheet (server stuff) -->
     <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" /> -->
     <!-- SHOELACE stylesheet -->
@@ -19,6 +20,167 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      :root {
+        /* --squareWidthToAdjHeight: 250px; */
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .debug {
+        border-width: 2px;
+        border-color: red;
+        border-style: solid;
+      }
+
+      /* this is fine */
+      .bb {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin: 20px;
+      }
+
+      .swiper {
+        /* height: fit-content;
+            width: fit-content; */
+        /* width: 200px; */
+        background-color: hsla(270, 100%, 50%, 0.25);
+        display: flex;
+        width: fit-content;
+        /* flex does nothing???? */
+        /* display: flex;
+            justify-content: space-between; */
+        /* align-items: center; */
+      }
+
+      .swiper-wrapper {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        width: fit-content;
+        height: fit-content;
+        gap: 20px;
+      }
+
+      .swiper-slide {
+        background: orange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: fit-content;
+      }
+
+      .swiper-slide-active {
+        border-color: black;
+      }
+
+      /* fine */
+      .fortnite {
+        background-color: hsla(0, 50%, 50%, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+      }
+
+      .responsiveDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        width: 650px;
+        overflow: hidden;
+      }
+
+      /* sl styles */
+
+      .sl_card_sec04::part(body) {
+        padding: 0px;
+        width: 200px;
+        height: 200px;
+      }
+
+      .sl_carousel_sec04 {
+        --aspect-ratio: 1/1;
+        /* width: var(--squareWidthToAdjHeight); */
+        width: auto;
+        height: auto;
+        gap: 0px;
+      }
+
+      .sl_carousel_sec04::part(base) {
+        border-color: orange;
+        border-width: 2px;
+        border-style: solid;
+        /* ------- */
+        display: grid;
+        gap: 0px;
+        grid-template-columns: 1fr;
+        /* grid-template-rows: 1fr; */
+        /* ------- */
+        /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; */
+      }
+
+      .sl_carousel_sec04::part(scroll-container) {
+        border-color: blue;
+        border-width: 2px;
+        border-style: solid;
+        /* display: grid; */
+        grid-area: 1 / 1;
+        gap: 0px;
+      }
+
+      .sl_carousel_sec04::part(pagination) {
+        border-color: green;
+        border-width: 2px;
+        border-style: solid;
+        grid-area: 1 / 1;
+        position: absolute;
+        /* bottom: calc(20px + calc(-1 * calc(var(--squareWidthToAdjHeight) / 2))); */
+        bottom: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+      }
+
+      .sl_carousel_sec04::part(pagination-item) {
+        padding: 0px;
+        border-radius: 100%;
+        --dimensions: 8px;
+        width: var(--dimensions);
+        height: var(--dimensions);
+      }
+    </style>
   </head>
   <body>
     <!-- TEST SEC 01 -->
@@ -272,7 +434,7 @@
     <!-- /TEST SEC 02 (4b) -->
 
     <!-- TEST SEC 03 -->
-    <sl-card class="sl_cardTest">
+    <!-- <sl-card class="sl_cardTest">
       <sl-carousel pagination loop mouse-dragging class="sl_carouselTest">
         <sl-carousel-item
           ><img
@@ -328,8 +490,143 @@
             alt="fortnite"
         /></sl-carousel-item>
       </sl-carousel>
-    </sl-card>
+    </sl-card> -->
     <!-- /TEST SEC 03 -->
+    <!-- Swiper -->
+    <div class="bb debug">
+      <div class="debug">wrapper div</div>
+      <!-- responsiveDiv -->
+      <div class="debug responsiveDiv">
+        <div class="swiper mySwiper debug">
+          <div class="swiper-wrapper debug">
+            <div class="swiper-slide debug">
+              <!-- card 01 -->
+              <sl-card class="debug sl_card_sec04">
+                <sl-carousel
+                  pagination
+                  loop
+                  mouse-dragging
+                  class="debug sl_carousel_sec04"
+                >
+                  <sl-carousel-item class="sl-carousel-item_size"
+                    ><img
+                      src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                      alt="fortnite"
+                  /></sl-carousel-item>
+                  <sl-carousel-item
+                    ><img
+                      src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                      alt="fortnite"
+                  /></sl-carousel-item>
+                  <sl-carousel-item
+                    ><img
+                      src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                      alt="fortnite"
+                  /></sl-carousel-item>
+                </sl-carousel>
+              </sl-card>
+            </div>
+            <div class="swiper-slide debug">
+              <!-- card 01 -->
+              <sl-card class="debug sl_card_sec04">
+                <sl-carousel
+                  pagination
+                  loop
+                  mouse-dragging
+                  class="debug sl_carousel_sec04"
+                >
+                  <sl-carousel-item class="sl-carousel-item_size"
+                    ><img
+                      src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                      alt="fortnite"
+                  /></sl-carousel-item>
+                  <sl-carousel-item
+                    ><img
+                      src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                      alt="fortnite"
+                  /></sl-carousel-item>
+                  <sl-carousel-item
+                    ><img
+                      src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                      alt="fortnite"
+                  /></sl-carousel-item>
+                </sl-carousel>
+              </sl-card>
+            </div>
+            <div class="swiper-slide debug">
+              <!-- card 01 -->
+              <sl-card class="debug sl_card_sec04">
+                <sl-carousel
+                  pagination
+                  loop
+                  mouse-dragging
+                  class="debug sl_carousel_sec04"
+                >
+                  <sl-carousel-item class="sl-carousel-item_size"
+                    ><img
+                      src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                      alt="fortnite"
+                  /></sl-carousel-item>
+                  <sl-carousel-item
+                    ><img
+                      src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                      alt="fortnite"
+                  /></sl-carousel-item>
+                  <sl-carousel-item
+                    ><img
+                      src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                      alt="fortnite"
+                  /></sl-carousel-item>
+                </sl-carousel>
+              </sl-card>
+            </div>
+            <div class="swiper-slide debug">
+              <div class="fortnite debug">4</div>
+            </div>
+            <div class="swiper-slide debug">
+              <div class="fortnite debug">5</div>
+            </div>
+            <div class="swiper-slide debug">
+              <div class="fortnite debug">6</div>
+            </div>
+            <div class="swiper-slide debug">
+              <div class="fortnite debug">7</div>
+            </div>
+          </div>
+          <!-- <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div> -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        slidesPerView: "auto",
+        // centereed slides messes looping up
+        centeredSlides: true,
+        cssMode: true,
+        loop: true,
+        // autoplay: {
+        //   delay: 5000,
+        //   disableOnInteraction: true,
+        // },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        // navigation: {
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev"
+        // }
+      });
+    </script>
+    <div style="height: 100px"></div>
 
     <!-- SCRIPTS -->
     <!-- MAIN js -->
@@ -340,30 +637,6 @@
       type="module"
       src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"
     ></script>
-    <!-- SWIPER js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- initialise Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        cssMode: true,
-        slidesPerView: 3,
-        spaceBetween: 30,
-        centeredSlides: true,
-        loop: true,
-
-        // autoplay: {
-        //   delay: 2000,
-        //   disableOnInteraction: false,
-        // },
-        pagination: {
-          el: ".swiper-pagination",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
     <!-- PYSCRIPT (server stuff) -->
     <!-- <script defer src="https://pyscript.net/latest/pyscript.js"></script>  -->
     <!-- <py-config src="./pyscript.toml"></py-config> -->
