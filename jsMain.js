@@ -46,3 +46,11 @@ function autoScrollFn() {
   scrollToWhere.scrollIntoView();
   // scrollToWhere.scroll({ top: scrollToWhere.scrollHeight, behavior: "smooth"
 }
+
+// copied from shoelace https://shoelace.style/components/drawer
+const drawer = document.querySelector(".drawer-overview");
+const openButton = drawer.nextElementSibling;
+const closeButton = drawer.querySelector('sl-button[variant="primary"]');
+
+openButton.addEventListener("click", () => drawer.show());
+closeButton.addEventListener("click", () => drawer.hide());
