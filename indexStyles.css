@@ -13,6 +13,10 @@
   --textGreyColourDarker: hsla(0, 0%, 33%, 1);
 }
 
+html {
+  font-size: 100%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -20,7 +24,7 @@
 .debug {
   margin: 0px;
   padding: 0px;
-  border-color: hsla(0, 100%, 50%, 0.125);
+  border-color: hsla(0, 100%, 50%, 0.5);
   border-width: 1px;
   border-style: solid;
 }
@@ -48,7 +52,9 @@ h2 {
 }
 
 .subHeading02_Overwrite {
-  font-size: 38px;
+  /* font-size: 38px; */
+  font-size: clamp(2rem, 1.5vw, 3.8rem);
+  /* font-size: 38px; */
 }
 
 .subHeading03 {
@@ -61,7 +67,7 @@ h2 {
 }
 
 .smallText {
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 
 .greyText {
@@ -75,13 +81,13 @@ h2 {
 /* --------------------------------------------------------------------------------------- */
 /* HEADER */
 .header {
-  background-color: hsla(0, 0%, 70%, 1);
-  padding-left: var(--varPadding);
-  padding-right: var(--varPadding);
+  /* background-color: hsla(0, 0%, 70%, 1); */
 }
 /* NAV HEADER */
 .nav_header {
   background-color: hsla(0, 0%, 90%, 1);
+  padding-left: var(--varPadding);
+  padding-right: var(--varPadding);
   display: flex;
   justify-content: space-between;
   height: 55px;
@@ -114,7 +120,7 @@ h2 {
   color: black;
 }
 .span_navLinkTextStyling {
-  color: green;
+  /* color: green; */
 }
 .div_headerNavHB {
   display: none;
@@ -128,7 +134,7 @@ h2 {
 /* --------------------------------------------------------------------------------------- */
 /* SEC 01 */
 .d_sec01 {
-  background-color: hsla(0, 100%, 70%, 0.5);
+  /* background-color: hsla(0, 100%, 70%, 0.5); */
   display: flex;
   display: grid;
   grid-template-columns: 1fr;
@@ -140,11 +146,24 @@ h2 {
   grid-area: 1 / 1;
   display: flex;
   justify-content: center;
+  height: 80vh;
   /* width: 100%; accounts for vert scroll bar where as vw does not */
-  width: 100%;
+  /* width: 16%; */
   /* 100vw - global padding. chrome was just messing up */
   /* width: calc(100% - calc(2 * 25px)); */
-  height: 300px;
+  /* object-fit: cover;
+  width: 100%; */
+  /* height: 500px; */
+  /* height: 100%; */
+}
+
+.videoContainer {
+  /* height: 100vh; */
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  aspect-ratio: 16/9;
 }
 
 .d_sec01_bb_text-video-overlay {
@@ -158,6 +177,7 @@ h2 {
   width: auto;
   padding-top: 10px;
   padding-bottom: 20px;
+  gap: clamp(0.25rem, 0.5rem, 2rem);
 }
 
 .d_sec01_bb_btn {
@@ -292,6 +312,10 @@ h2 {
   height: fit-content;
 }
 
+.sl_card_sec04::part(base) {
+  border-style: none;
+}
+
 .sl_card_sec04::part(body) {
   padding: 0px;
   display: flex;
@@ -307,10 +331,9 @@ h2 {
 }
 
 .sl_carousel_sec04::part(base) {
-  border-color: orange;
+  /* border-color: orange;
   border-width: 2px;
-  border-style: solid;
-  /* ------- */
+  border-style: solid; */
   display: grid;
   gap: 0px;
   grid-template-columns: 1fr;
@@ -323,18 +346,20 @@ h2 {
 }
 
 .sl_carousel_sec04::part(scroll-container) {
-  border-color: blue;
+  /* border-color: blue;
   border-width: 2px;
-  border-style: solid;
+  border-style: solid; */
+  /* ------ */
   /* display: grid; */
   grid-area: 1 / 1;
   gap: 0px;
 }
 
 .sl_carousel_sec04::part(pagination) {
-  border-color: green;
+  /* border-color: green;
   border-width: 2px;
-  border-style: solid;
+  border-style: solid; */
+  /* ----- */
   grid-area: 1 / 1;
   position: absolute;
   /* bottom: calc(20px + calc(-1 * calc(var(--squareWidthToAdjHeight) / 2))); */
@@ -358,7 +383,7 @@ h2 {
   padding-top: var(--paddingVal);
   padding-bottom: var(--paddingVal);
   font-size: 1.5vw;
-  font-size: clamp(12px, 1.5vw, 18px);
+  font-size: clamp(1.2rem, 1.5vw, 1.8rem);
 }
 
 /* --------------------------------------------------------------------------------------- */
@@ -396,7 +421,8 @@ h2 {
 
 /* fix <410 responsiveness with inside content has to shrink */
 .d_sec05_bb_mainLeft {
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
+  /* ----- */
   display: flex;
   flex-direction: column;
   padding-top: 20px;
@@ -410,12 +436,13 @@ h2 {
 }
 
 #h2_sec05 {
-  font-size: 32px;
+  font-size: 3.2rem;
 }
 
 /* fix <410 responsiveness with inside content has to shrink */
 .d_sec05_bb_mainRight {
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
+  /* ------- */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -538,7 +565,7 @@ h2 {
 .d_bb_acknowledgment {
   padding-top: 25px;
   padding-bottom: 25px;
-  font-size: 12px;
+  font-size: 1.2rem;
   width: calc(calc(100% * 0.66) - 100vw);
   --widthTest: 100%;
   width: calc(var(--widthTest));
@@ -554,7 +581,7 @@ h2 {
 }
 
 .smallText_overwrite {
-  font-size: 9px;
+  font-size: 0.9rem;
   color: var(--footerWhiteColour);
 }
 
@@ -575,6 +602,9 @@ h2 {
 .btn_collapsable {
   background-color: unset;
   color: var(--footerWhiteColour);
+  border-style: unset;
+  border-radius: unset;
+  border-color: unset;
 }
 
 .btn_collapsable:hover {
@@ -640,7 +670,7 @@ sl-tree-item::part(item) {
 }
 
 .smallTextOverwrite {
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 
 /* --------------------------------------------------------------------------------------- */
@@ -663,7 +693,7 @@ sl-tree-item::part(item) {
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 530px) {
   .div_headerLinksBB {
     display: none;
   }

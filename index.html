@@ -33,7 +33,7 @@
       <!-- NAV -->
       <nav class="nav_header">
         <div class="d_nav_img_bb_logo">
-          <a href="#" target="_blank"
+          <a href="#"
             ><img
               src="./image/logo/primary-logoWhite.svg"
               alt="site logo"
@@ -71,12 +71,17 @@
     </header>
     <!-- /HEADER -->
     <!-- SEC 01 -->
-    <div class="d_sec01 debug">
-      <div class="debug d_sec01_bb_video">[insert video]</div>
+    <div class="d_sec01 debug" id="d_sec01">
+      <div class="debug d_sec01_bb_video">
+        <!-- placeholder -->
+        <img
+          src="./image/placeholders/young-qin-20230905.jpg"
+          alt="video placeholder"
+          class="videoContainer"
+        />
+      </div>
       <div class="debug d_sec01_bb_text-video-overlay">
-        <h2 class="debug subHeading02 boldText subHeading02_Overwrite">
-          Welcome
-        </h2>
+        <h2 class="debug boldText subHeading02_Overwrite">Welcome</h2>
         <span class="debug boldText">Curtin Graduate Event 2023</span>
       </div>
       <div class="debug d_sec01_bb_btn">
@@ -99,19 +104,19 @@
           dicta velit magnam recusandae est voluptates explicabo qui? Dolorum
           quaerat eaque at quisquam.
         </article>
-        <h3 class="debug subHeading03 boldText greyText">
+        <h3 class="debug subHeading03 boldText greyText" id="d_sec02">
           See what people are saying
         </h3>
       </section>
     </div>
     <!-- /SEC 02 -->
     <!-- SEC 03 -->
-    <div class="debug d_sec03">
+    <div class="debug d_sec03" id="d_sec03">
       <div class="debug">text</div>
     </div>
     <!-- /SEC 03 -->
     <!-- SEC 04 -->
-    <div class="debug d_sec04">
+    <div class="debug d_sec04" id="d_sec04">
       <div class="debug d_sec04_bb_title">
         <h2 class="debug subHeading02 boldText greyText subHeading02_Overwrite">
           Meet the Grads!
@@ -122,9 +127,9 @@
         <!-- when slide change, js event to get data, inc index by 1, then in js scale size of that new sl-gallery-item/element by 1.2 for the centered larger scale effect -->
         <!-- outer gallery -->
         <!--           autoplay
-          autoplay-interval="10000"
+          autoplay-interval="5000"
         pagination -->
-        <sl-carousel loop pagination class="sl-carousel_outer">
+        <sl-carousel loop class="sl-carousel_outer">
           <!-- item 1-->
           <sl-carousel-item class="sl-carousel-item_card">
             <!-- card 01 -->
@@ -323,7 +328,7 @@
     </div>
     <!-- /SEC 04 -->
     <!-- SEC 05 -->
-    <div class="debug d_sec05">
+    <div class="debug d_sec05" id="d_sec05">
       <div class="debug d_sec05_bb_both">
         <div class="debug d_sec05_bb_main">
           <div class="debug d_sec05_bb_mainLeft">
@@ -390,7 +395,7 @@
       <nav class="debug n_footer_overwrite">
         <div class="debug d_bb_footerNavLeft">
           <div class="debug d_n_f_bb_curtinLogo">
-            <a href="#" target="_blank"
+            <a href="#"
               ><img
                 src="./image/logo/primary-logoWhite.svg"
                 alt="site logo"
@@ -399,7 +404,7 @@
           </div>
           <div class="d_f_n_bb_links debug">
             <div class="div_navLinksBB debug">
-              <a href="#" class="a_navLinks"
+              <a href="#footerStart" class="a_navLinks"
                 ><span
                   class="span_navLinkTextStyling s_linkOverwrite boldText debug"
                   >Graduates</span
@@ -407,7 +412,7 @@
               </a>
             </div>
             <div class="div_navLinksBB debug">
-              <a href="#" class="a_navLinks">
+              <a href="#footerStart" class="a_navLinks">
                 <span
                   class="span_navLinkTextStyling debug s_linkOverwrite boldText"
                   >About Us</span
@@ -415,7 +420,7 @@
               </a>
             </div>
             <div class="div_navLinksBB debug">
-              <a href="#" class="a_navLinks">
+              <a href="#footerStart" class="a_navLinks">
                 <span
                   class="span_navLinkTextStyling debug s_linkOverwrite boldText"
                   >News</span
@@ -423,7 +428,7 @@
               </a>
             </div>
             <div class="div_navLinksBB debug">
-              <a href="#" class="a_navLinks">
+              <a href="#footerStart" class="a_navLinks">
                 <span
                   class="span_navLinkTextStyling debug s_linkOverwrite boldText"
                   >Contact</span
@@ -530,9 +535,9 @@
         >
         <!-- collapse button -->
         <button
-          class="btn_collapsable debug s_linkOverwrite smallText smallTextOverwrite"
+          class="btn_collapsable debug s_linkOverwrite smallText smallTextOverwrite jsAutoScrollDown"
         >
-          Sitemap
+          Sitemap ^
         </button>
         <!-- sl-tree internals -->
         <!-- need to fix in sl-tree, add text click to activate dropdown aswell. -->
@@ -542,39 +547,42 @@
           <div class="debug">
             <!-- all tree element links fail on enter key -->
             <!-- tree 01 -->
-            <sl-tree class="debug">
+            <sl-tree class="debug jsAutoScrollDown">
               <sl-tree-item>
                 <span class="s_textOverwrite">Navigation</span>
                 <sl-tree-item>
-                  <a href="#" class="a_navLinks"
+                  <a href="#footerStart" class="a_navLinks"
                     ><span class="span_navLinkTextStyling s_linkOverwrite debug"
                       >Graduates</span
                     >
                   </a>
                 </sl-tree-item>
                 <sl-tree-item>
-                  <a href="#" class="a_navLinks"
+                  <a href="#footerStart" class="a_navLinks"
                     ><span class="span_navLinkTextStyling s_linkOverwrite debug"
                       >About Us</span
                     >
                   </a>
                 </sl-tree-item>
                 <sl-tree-item>
-                  <a href="#" class="a_navLinks"
+                  <a href="#footerStart" class="a_navLinks"
                     ><span class="span_navLinkTextStyling s_linkOverwrite debug"
                       >News</span
                     >
                   </a>
                 </sl-tree-item>
                 <sl-tree-item>
-                  <a href="#" class="a_navLinks"
+                  <a href="#footerStart" class="a_navLinks"
                     ><span class="span_navLinkTextStyling s_linkOverwrite debug"
                       >Contact</span
                     >
                   </a>
                 </sl-tree-item>
                 <sl-tree-item>
-                  <a href="#" class="a_navLinks"
+                  <a
+                    href="https://www.curtin.edu.au/"
+                    target="_blank"
+                    class="a_navLinks"
                     ><span class="span_navLinkTextStyling s_linkOverwrite debug"
                       >Curtin University</span
                     >
@@ -585,21 +593,50 @@
           </div>
           <!--  -->
           <div class="debug">
-            <sl-tree>
+            <sl-tree class="jsAutoScrollDown">
               <sl-tree-item>
                 <span class="s_textOverwrite">Homepage</span>
-
-                <sl-tree-item>Section 01</sl-tree-item>
-                <sl-tree-item>Section 02</sl-tree-item>
-                <sl-tree-item>Section 03</sl-tree-item>
-                <sl-tree-item>Section 04</sl-tree-item>
-                <sl-tree-item>Section 05</sl-tree-item>
+                <sl-tree-item>
+                  <a href="#d_sec01" class="a_navLinks"
+                    ><span class="span_navLinkTextStyling s_linkOverwrite debug"
+                      >Welcome</span
+                    >
+                  </a>
+                </sl-tree-item>
+                <sl-tree-item>
+                  <a href="#d_sec02" class="a_navLinks"
+                    ><span class="span_navLinkTextStyling s_linkOverwrite debug"
+                      >Who are we?</span
+                    >
+                  </a>
+                </sl-tree-item>
+                <sl-tree-item>
+                  <a href="#d_sec03" class="a_navLinks"
+                    ><span class="span_navLinkTextStyling s_linkOverwrite debug"
+                      >What people say</span
+                    >
+                  </a></sl-tree-item
+                >
+                <sl-tree-item>
+                  <a href="#d_sec04" class="a_navLinks"
+                    ><span class="span_navLinkTextStyling s_linkOverwrite debug"
+                      >Meet the grads</span
+                    >
+                  </a></sl-tree-item
+                >
+                <sl-tree-item>
+                  <a href="#d_sec05" class="a_navLinks"
+                    ><span class="span_navLinkTextStyling s_linkOverwrite debug"
+                      >Sponsors</span
+                    >
+                  </a></sl-tree-item
+                >
               </sl-tree-item>
             </sl-tree>
           </div>
           <!--  -->
           <div class="debug">
-            <sl-tree>
+            <sl-tree class="jsAutoScrollDown">
               <sl-tree-item>
                 <span class="s_textOverwrite">Social Media</span>
 
@@ -647,7 +684,7 @@
             </sl-tree>
           </div>
           <div class="debug">
-            <sl-tree>
+            <sl-tree class="jsAutoScrollDown">
               <sl-tree-item>
                 <span class="s_textOverwrite">Other</span>
                 <sl-tree-item>
@@ -692,17 +729,15 @@
           >CRICOS Provider Code 00301J</span
         >
         <span class="debug smallText s_abnOverwriteColour">TEQSA PRV12158</span>
-        <a href="#" class="debug smallText smallText_overwrite"
+        <a href="#footerStart" class="debug smallText smallText_overwrite"
           >Certified in web accessability</a
         >
       </div>
     </footer>
-    <div style="height: 500px"></div>
+
     <!-- /FOOTER -->
 
     <!-- SCRIPTS -->
-    <!-- MAIN js -->
-    <script src="./jsMain.js"></script>
     <!-- MODULES js -->
     <!-- SHOELACE -->
     <script
@@ -737,5 +772,7 @@
     <!-- <script defer src="https://pyscript.net/latest/pyscript.js"></script>  -->
     <!-- <py-config src="./pyscript.toml"></py-config> -->
     <!-- <py-script src="./pyMain.py"></py-script> -->
+    <!-- MAIN js -->
+    <script src="./jsMain.js"></script>
   </body>
 </html>
