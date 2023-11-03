@@ -646,6 +646,7 @@ h2 {
 
 .d_sec05_bb_sitemap {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: left;
   align-items: top;
@@ -675,6 +676,7 @@ sl-tree-item::part(item) {
 }
 
 sl-tree-item::part(base) {
+  width: 150px;
 }
 
 .sl_divider {
