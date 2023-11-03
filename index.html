@@ -21,11 +21,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css"
     />
-    <!-- SWIPER stylesheet -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
   </head>
   <body>
     <!-- HEADER -->
@@ -82,7 +77,9 @@
       </div>
       <div class="debug d_sec01_bb_text-video-overlay">
         <h2 class="debug boldText subHeading02_Overwrite">Welcome</h2>
-        <span class="debug boldText">Curtin Graduate Event 2023</span>
+        <span class="debug boldText subHeading03"
+          >Curtin Graduate Event 2023</span
+        >
       </div>
       <div class="debug d_sec01_bb_btn">
         <button class="debug d_sec01_btn">
@@ -126,12 +123,47 @@
       <div class="debug d_sec04_bb_largeGallery">
         <!-- when slide change, js event to get data, inc index by 1, then in js scale size of that new sl-gallery-item/element by 1.2 for the centered larger scale effect -->
         <!-- outer gallery -->
-        <!--           autoplay
+        <!--pagination -->
+        <sl-carousel
+          loop
+          autoplay
           autoplay-interval="5000"
-        pagination -->
-        <sl-carousel loop class="sl-carousel_outer">
-          <!-- item 1-->
+          class="sl-carousel_outer"
+        >
           <sl-carousel-item class="sl-carousel-item_card">
+            <!-- item 1-->
+            <!-- card 01 -->
+            <sl-card class="debug sl_card_sec04">
+              <sl-carousel
+                pagination
+                loop
+                mouse-dragging
+                class="debug sl_carousel_sec04"
+              >
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+                <sl-carousel-item
+                  ><img
+                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+                    alt="fortnite"
+                /></sl-carousel-item>
+              </sl-carousel>
+              <div class="d_carousel_studentName boldText greyTextDarker">
+                John Kennedy
+              </div>
+            </sl-card>
+          </sl-carousel-item>
+
+          <sl-carousel-item class="sl-carousel-item_card">
+            <!-- item 2-->
             <!-- card 01 -->
             <sl-card class="debug sl_card_sec04">
               <sl-carousel
@@ -161,8 +193,9 @@
               </div>
             </sl-card>
           </sl-carousel-item>
-          <!-- item 2-->
+
           <sl-carousel-item class="sl-carousel-item_card">
+            <!-- item 3-->
             <!-- card 01 -->
             <sl-card class="debug sl_card_sec04">
               <sl-carousel
@@ -192,8 +225,9 @@
               </div>
             </sl-card>
           </sl-carousel-item>
-          <!-- item 3-->
+
           <sl-carousel-item class="sl-carousel-item_card">
+            <!-- item 4-->
             <!-- card 01 -->
             <sl-card class="debug sl_card_sec04">
               <sl-carousel
@@ -219,12 +253,13 @@
                 /></sl-carousel-item>
               </sl-carousel>
               <div class="d_carousel_studentName boldText greyTextDarker">
-                Sarah Connor
+                4
               </div>
             </sl-card>
           </sl-carousel-item>
-          <!-- item 4-->
+
           <sl-carousel-item class="sl-carousel-item_card">
+            <!-- item 5-->
             <!-- card 01 -->
             <sl-card class="debug sl_card_sec04">
               <sl-carousel
@@ -250,12 +285,13 @@
                 /></sl-carousel-item>
               </sl-carousel>
               <div class="d_carousel_studentName boldText greyTextDarker">
-                Sarah Connor
+                5
               </div>
             </sl-card>
           </sl-carousel-item>
-          <!-- item 5-->
+
           <sl-carousel-item class="sl-carousel-item_card">
+            <!-- item 6-->
             <!-- card 01 -->
             <sl-card class="debug sl_card_sec04">
               <sl-carousel
@@ -281,38 +317,7 @@
                 /></sl-carousel-item>
               </sl-carousel>
               <div class="d_carousel_studentName boldText greyTextDarker">
-                Sarah Connor
-              </div>
-            </sl-card>
-          </sl-carousel-item>
-          <!-- item 6-->
-          <sl-carousel-item class="sl-carousel-item_card">
-            <!-- card 01 -->
-            <sl-card class="debug sl_card_sec04">
-              <sl-carousel
-                pagination
-                loop
-                mouse-dragging
-                class="debug sl_carousel_sec04"
-              >
-                <sl-carousel-item
-                  ><img
-                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
-                    alt="fortnite"
-                /></sl-carousel-item>
-                <sl-carousel-item
-                  ><img
-                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
-                    alt="fortnite"
-                /></sl-carousel-item>
-                <sl-carousel-item
-                  ><img
-                    src="https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
-                    alt="fortnite"
-                /></sl-carousel-item>
-              </sl-carousel>
-              <div class="d_carousel_studentName boldText greyTextDarker">
-                John Kennedy
+                6
               </div>
             </sl-card>
           </sl-carousel-item>
@@ -688,31 +693,25 @@
               <sl-tree-item>
                 <span class="s_textOverwrite">Other</span>
                 <sl-tree-item>
-                  <a
-                    href="#footerStart"
-                    class="debug s_linkOverwrite smallText smallTextOverwrite"
+                  <a href="#footerStart" class="debug s_linkOverwrite"
                     >Legal</a
                   ></sl-tree-item
                 >
                 <sl-tree-item>
                   <a
                     href="https://informationmanagement.curtin.edu.au/privacy/"
-                    class="debug s_linkOverwrite smallText smallTextOverwrite"
+                    class="debug s_linkOverwrite"
                     target="_blank"
                     >Privacy</a
                   ></sl-tree-item
                 >
                 <sl-tree-item>
-                  <a
-                    href="#footerStart"
-                    class="debug s_linkOverwrite smallText smallTextOverwrite"
+                  <a href="#footerStart" class="debug s_linkOverwrite"
                     >Accessability</a
                   ></sl-tree-item
                 >
                 <sl-tree-item>
-                  <a
-                    href="#footerStart"
-                    class="debug s_linkOverwrite smallText smallTextOverwrite"
+                  <a href="#footerStart" class="debug s_linkOverwrite"
                     >Certification</a
                   ></sl-tree-item
                 >
@@ -744,30 +743,7 @@
       type="module"
       src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"
     ></script>
-    <!-- SWIPER js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- initialise Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        cssMode: true,
-        slidesPerView: 3,
-        spaceBetween: 30,
-        centeredSlides: true,
-        loop: true,
 
-        // autoplay: {
-        //   delay: 2000,
-        //   disableOnInteraction: false,
-        // },
-        pagination: {
-          el: ".swiper-pagination",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
     <!-- PYSCRIPT (server stuff) -->
     <!-- <script defer src="https://pyscript.net/latest/pyscript.js"></script>  -->
     <!-- <py-config src="./pyscript.toml"></py-config> -->

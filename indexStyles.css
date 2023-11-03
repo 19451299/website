@@ -14,7 +14,8 @@
 }
 
 html {
-  font-size: 100%;
+  /* 62.5% sets 1rem = 10px */
+  font-size: 62.5%;
 }
 
 * {
@@ -22,11 +23,11 @@ html {
 }
 
 .debug {
-  margin: 0px;
+  /* margin: 0px;
   padding: 0px;
   border-color: hsla(0, 100%, 50%, 0.5);
   border-width: 1px;
-  border-style: solid;
+  border-style: solid; */
 }
 
 body {
@@ -47,19 +48,23 @@ h2 {
 } */
 
 .subHeading02 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .subHeading02_Overwrite {
+  margin: 0px;
+  padding: 0px;
   /* font-size: 38px; */
-  font-size: clamp(2rem, 1.5vw, 3.8rem);
+  --fontScale: calc(1.6rem * 3);
+  font-size: clamp(2rem, var(--fontScale), 5rem);
   /* font-size: 38px; */
 }
 
 .subHeading03 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin: 0px;
+  padding: 0px;
+  font-size: calc(1.6rem * 1.2);
 }
 
 .boldText {
@@ -67,7 +72,7 @@ h2 {
 }
 
 .smallText {
-  font-size: 1.2rem;
+  font-size: calc(1.6rem * 0.5);
 }
 
 .greyText {
@@ -121,6 +126,7 @@ h2 {
 }
 .span_navLinkTextStyling {
   /* color: green; */
+  font-size: 1.6rem;
 }
 .div_headerNavHB {
   display: none;
@@ -176,19 +182,18 @@ h2 {
   /* align-items: start; */
   width: auto;
   padding-top: 10px;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
   gap: clamp(0.25rem, 0.5rem, 2rem);
+  padding-bottom: calc(var(--varPadding) * 2);
 }
 
 .d_sec01_bb_btn {
-  padding-left: var(--varPadding);
-  padding-right: var(--varPadding);
   grid-area: 1 / 1;
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: center;
-  padding: 10px;
+  padding-bottom: 20px;
 }
 
 .d_sec01_btn {
@@ -213,8 +218,8 @@ h2 {
   padding-right: var(--varPadding);
   display: flex;
   flex-direction: column;
-  padding-top: var(--varPadding);
-  padding-bottom: var(--varPadding);
+  padding-top: calc(var(--varPadding) * 2.5);
+  padding-bottom: calc(var(--varPadding) * 2.5);
 }
 
 .s_sec02_bb {
@@ -229,6 +234,7 @@ h2 {
   width: 75%;
   padding-top: 10px;
   padding-bottom: 30px;
+  font-size: calc(1.6rem * 0.8);
 }
 
 /* --------------------------------------------------------------------------------------- */
@@ -251,8 +257,8 @@ h2 {
   /* background-color: hsla(150, 100%, 70%, 0.5); */
   padding-left: var(--varPadding);
   padding-right: var(--varPadding);
-  padding-top: var(--varPadding);
-  padding-bottom: var(--varPadding);
+  padding-top: calc(var(--varPadding) * 2.5);
+  padding-bottom: calc(var(--varPadding) * 0.5);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -262,6 +268,7 @@ h2 {
 .d_sec04_bb_title {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -270,21 +277,18 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* testing */
   height: fit-content;
-  /* height: 1000px; */
-  /* width: 700px; */
 }
 
 .sl-carousel_outer {
-  width: 90vw;
+  width: 100%;
   max-width: 1000px;
   --aspect-ratio: 1/1;
   height: 100%;
 }
 
 .sl-carousel_outer::part(base) {
-  gap: 0px;
+  /* gap: 0px; */
   /* background-color: aqua; */
   /* height: 300px; */
   /* display: grid; */
@@ -293,27 +297,32 @@ h2 {
   /* height: fit-content; */
   padding-top: 5vw;
   padding-bottom: 5vw;
+  width: fit-content;
 }
 
 .sl-carousel_outer::part(scroll-container) {
   /* background-color: red; */
   /* height: 300px; */
   /* height: 90%; */
+  display: grid;
   --slides-per-page: 3;
   /* genius idea by me, but showing the overflow breaks the gallery (doenst slide) */
   /* overflow: visible; */
+  /* gap: 40px; */
 }
 
 .sl-carousel-item_card {
-  height: fit-content;
+  /* height: fit-content; */
 }
 
 .sl_card_sec04 {
   height: fit-content;
+  width: 85%;
 }
 
 .sl_card_sec04::part(base) {
   border-style: none;
+  box-shadow: none;
 }
 
 .sl_card_sec04::part(body) {
@@ -391,8 +400,8 @@ h2 {
 .d_sec05 {
   /* background-color: hsla(200, 100%, 70%, 0.5); */
   background-color: hsla(0, 0%, 96%, 1);
-  padding-top: var(--varPadding);
-  padding-bottom: var(--varPadding);
+  padding-top: calc(var(--varPadding) * 1);
+  padding-bottom: calc(var(--varPadding) * 2);
   display: flex;
   flex-direction: column;
   /* for testing. remove for ship */
@@ -487,6 +496,7 @@ h2 {
 .d_sec05_bodyText {
   display: flex;
   /* padding-top: 50px; */
+  font-size: calc(1.6rem * 0.8);
 }
 
 .d_sec05_bb_loopyThingy {
@@ -555,6 +565,7 @@ h2 {
 .s_linkOverwrite {
   color: var(--footerWhiteColour);
   text-decoration: solid;
+  font-size: 1.6rem;
 }
 
 .s_abnOverwriteColour {
@@ -565,7 +576,7 @@ h2 {
 .d_bb_acknowledgment {
   padding-top: 25px;
   padding-bottom: 25px;
-  font-size: 1.2rem;
+  font-size: calc(1.6rem * 0.8);
   width: calc(calc(100% * 0.66) - 100vw);
   --widthTest: 100%;
   width: calc(var(--widthTest));
@@ -639,6 +650,7 @@ sl-tree-item::part(label) {
 
 .s_textOverwrite {
   font-weight: 700;
+  font-size: 1.6rem;
 }
 
 sl-tree-item::part(item--selected) {
@@ -647,6 +659,10 @@ sl-tree-item::part(item--selected) {
 
 sl-tree-item::part(item) {
   padding-right: 20px;
+  padding-top: 10px;
+}
+
+sl-tree-item::part(base) {
 }
 
 .sl_divider {
@@ -670,7 +686,7 @@ sl-tree-item::part(item) {
 }
 
 .smallTextOverwrite {
-  font-size: 1.4rem;
+  font-size: calc(1.6rem * 0.75);
 }
 
 /* --------------------------------------------------------------------------------------- */
